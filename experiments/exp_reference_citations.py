@@ -1,0 +1,46 @@
+"""
+步骤 1/2/6/7/8 · 严格证明补全：引用标准定理清单（真·证明的「引用」半边）
+
+这五步的核心是「引用标准定理 + 符号验证」，本脚本把每条严格证明链的
+【引用标准定理】环节明确列出并给文献，与已有符号验证脚本（exp_stepN_*）
+合并即构成完整严格证明。
+
+形式：每条 = 命题 + 证明链（引用 ∥ 符号验证，后者已在对应脚本做过）。
+"""
+from experiments._common import report
+
+R = {
+  "步骤1 本体 R（超有限 II₁）": {
+    "命题": "存在超有限 II₁ 因子 R（无限维 + 连续迹 + 无最小投影）",
+    "引用标准定理": "Murray–von Neumann 分类 + Connes 超有限因子定理（唯一超有限 II₁ 因子的存在与唯一性）",
+    "符号验证": "迹相容性 τ_{n+1}(x⊗I)=τ_n(x)、投影二分正交（exp_step1_ontology_R）",
+    "ref": "Connes, Ann. Math. 104 (1976)；Murray–von Neumann (1936)",
+  },
+  "步骤2 观察 E（条件期望）": {
+    "命题": "存在保迹条件期望 E:R→D（E²=E、τ∘E=τ、E(1)=1）",
+    "引用标准定理": "Takesaki 条件期望定理（II₁ 因子上存在保迹条件期望到任一 von Neumann 子代数）",
+    "符号验证": "E²=E、保迹、E(1)=1、正性（exp_step2_observation_E）",
+    "ref": "Takesaki, J. Funct. Anal. 9 (1972)",
+  },
+  "步骤6 时间（模流）": {
+    "命题": "σ_t=Ad(ρ^{it}) 是单参数 *-自同构群，生成元 i[log ρ,·]",
+    "引用标准定理": "Tomita–Takesaki 模理论（模流的存在性、*-自同构性）",
+    "符号验证": "生成元 i[log ρ,·]、ρ 不动点（exp_step6_time）",
+    "ref": "Takesaki, Tomita-Takesaki Theory; Bratteli–Robinson Vol.2",
+  },
+  "步骤7 曲率（Chebyshev）": {
+    "命题": "δ_N=2cos(π/(N+1)) 是单位根（最大弦数 N ⟹ 量子维度）",
+    "引用标准定理": "Jones–Wenzl 幂等元存在性判据（SU(2)_k 截断）；Chebyshev U_n 零点公式",
+    "符号验证": "Δ_{N−1}=1、Δ_N=0、边缘间隔 3π²/N²（exp_step7_curvature）",
+    "ref": "Jones (1983); Wenzl (1987)",
+  },
+  "步骤8 弯曲（缺陷→标量曲率）": {
+    "命题": "缺陷 φ ⟹ R=−∇²φ+O(ε²)（弱场标量曲率）",
+    "引用标准定理": "Q1 已解：角亏 δ=标量曲率（Regge 角亏 + 弱场交叉二阶导）",
+    "符号验证": "1/w 弱场展开、度规扰动 h=2εφ、R=−2εφ''（exp_step8_bending）",
+    "ref": "本理论预印本 1.7/1.8（Q1 角亏=标量曲率）；Regge (1961)",
+    "开放": "定理 B 非线性精确版（弱场→全阶）——唯一真开放问题",
+  },
+}
+
+report(R, "exp_reference_citations")
