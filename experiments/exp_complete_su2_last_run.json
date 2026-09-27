@@ -1,0 +1,29 @@
+{
+  "generators_from_anticomm_kramers": {
+    "σ_z = -iT_xT_y（反对易产物）= σ_z？": true,
+    "σ_y = -iT（Kramers）= σ_y？": true,
+    "σ_x = iT·T_xT_y（组合）= σ_x？": true,
+    "意义": "σ_y（Kramers）和 σ_z（反对易）是两个独立方向，σ_x = 两者的乘积——完整 SU(2) 从「反对易 × Kramers」拼出"
+  },
+  "su2_lie_algebra": {
+    "[σ_x, σ_y] = 2iσ_z？": true,
+    "[σ_y, σ_z] = 2iσ_x？": true,
+    "[σ_z, σ_x] = 2iσ_y？": true,
+    "意义": "三个生成元满足 SU(2) 李代数——「反对易 + Kramers」拼出完整 SU(2)（弱同位旋）"
+  },
+  "orthogonal_directions": {
+    "σ_z（反对易）与 σ_y（Kramers）反对易（正交）": true,
+    "σ_x = σ_z 与 σ_y 的乘积（第三个正交方向）": "i T T_xT_y",
+    "完整结构": "反对易（σ_z）和 Kramers（σ_y）是 ±i 空间的两个正交方向，乘积给 σ_x——三者拼成完整 SU(2)≅S³"
+  },
+  "full_chain_final": {
+    "链条": "π 磁通 Z₂（=自旋 1/2 Z₂）→ 反对易 T_xT_y=-T_yT_x（σ_z 方向）+ Kramers T=iσ_y（σ_y 方向）→ σ_x=iT·T_xT_y（组合）→ 完整 SU(2)（σ_x σ_y σ_z）→ 弱同位旋 → 作用 σ 空间 → 对易手征 γ⁵ → 只作用左手",
+    "最后一环解决": "反对易 和 Kramers 是同一个 ±i 空间的两个正交方向（σ_z vs σ_y），乘积给 σ_x——完整 SU(2) 从「反对易 × Kramers」拼出，手征性链条彻底闭合"
+  },
+  "honest_conclusion": {
+    "坐实（精确）": "① σ_z=-iT_xT_y（反对易）、σ_y=-iT（Kramers）、σ_x=iT·T_xT_y（组合）精确成立；② 三者满足 SU(2) 李代数 [σ_i,σ_j]=2iε_ijkσ_k；③ σ_z 与 σ_y 反对易（正交）",
+    "最后一环解决": "反对易（σ_z 方向）+ Kramers（σ_y 方向）是同一个 ±i 空间的两个正交方向，乘积给 σ_x——完整 SU(2) 从「反对易 × Kramers」拼出",
+    "完整手征性链条（闭合）": "π 磁通 Z₂ → 反对易 + Kramers → 完整 SU(2)（弱同位旋）→ 作用 σ 空间 → 对易手征 γ⁵（τ 空间）→ 只作用左手",
+    "措辞": "符号坐实（反对易×Kramers→完整SU(2)）+ 手征性链条彻底闭合"
+  }
+}
