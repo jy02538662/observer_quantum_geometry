@@ -1,0 +1,32 @@
+{
+  "step1_quantization": {
+    "λ_min = π²/N_int²": "量子化 δ_N=2cos(π/(N+1)) 的尺度破缺 2−δ_N=π²/N_int²",
+    "N_int 幂次": "-2（量子化的平方结构）"
+  },
+  "step2_dirac": {
+    "m = Λ_eff·λ_min^{1/2}": "Dirac 质量 = 能隙 = D 谱下界 = λ_min^{1/2}·Λ_eff",
+    "λ_min 幂次": "1/2 ⟹ N_int 幂次 -1（一次区分）"
+  },
+  "step3_majorana": {
+    "M_R = M_P·λ_min/π²": "Majorana 质量 ∝ λ_min（一次方）",
+    "λ_min 幂次": "1 ⟹ N_int 幂次 -2（两次区分）"
+  },
+  "step4_MR_propto_m2": {
+    "M_R/m² = M_P/(π²·Λ_eff²)": "M_P/(pi**2*Lambda_eff**2)（Λ_eff 固定下 M_R ∝ m²）",
+    "意义": "「平方」= M_R 的 λ_min 幂次（1）是 m 的（1/2）的两倍 = 区分次数翻倍 = ΔL=2"
+  },
+  "step5_power_rule": {
+    "规则": "N_int 幂次 = 区分次数（Dirac 1 次→1/N_int，Majorana 2 次→1/N_int²）",
+    "来源": "λ_min ∝ 1/N_int²（量子化平方），m∝λ_min^{1/2}（半次），M_R∝λ_min（一次）"
+  },
+  "step6_seesaw": {
+    "m_ν = v²/M_R = v²·N_int²/M_P": "N_int**2*v**2/M_P",
+    "数值（v=246, N_int=128, M_P=10^19）": "≈ 81 meV（观测 50-100 meV）"
+  },
+  "honest_conclusion": {
+    "「1 生 2」严格化": "核心是「N_int 幂次 = 区分次数」：λ_min∝1/N_int²（量子化），m∝λ_min^{1/2}（Dirac 一次区分），M_R∝λ_min（Majorana 两次区分）⟹ M_R∝m²。",
+    "平方的来源": "「平方」= M_R 的 λ_min 幂次（1）是 m 的（1/2）的两倍 = ΔL=2 的两次区分。",
+    "诚实边界": "「m∝λ_min^{1/2}」是推导（能隙=谱下界平方根）；「M_R∝λ_min（一次方）」是「有理由的猜测」（两次区分=一次 λ_min），非从公理严格推。",
+    "措辞": "「1 生 2」直觉符号坐实（M_R∝m²），非「已从公理推平方」——「区分次数→λ_min 幂次」的机制仍是候选。"
+  }
+}
