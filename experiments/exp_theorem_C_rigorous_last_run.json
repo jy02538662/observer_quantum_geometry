@@ -1,0 +1,18 @@
+{
+  "(1)_trace_preserving": {
+    "tr([log ρ, x])": "0",
+    "assert_zero": true,
+    "note": "生成元 i[logρ,·] 的迹 = 0 ⟹ 模流保迹（τ∘σ_t=τ）",
+    "automorphism_status": "σ_t=Ad(ρ^{it}) 是 *-自同构（引用 Tomita–Takesaki）"
+  },
+  "(2)_rho_fixedpoint": {
+    "rho 与自身对角对易 ⟹ σ_t(ρ)=ρ": "对角矩阵 ρ 与 ρ^{it} 对易",
+    "assert_trivial": true
+  },
+  "(3)_E_preserves_modular_flow": {
+    "E(σ_t(x)) = σ_t^0(x0)·τ(σ_t^1(x1)) = σ_t^0(x0)·τ(x1)": "（(1) 保迹）",
+    "σ_t(E(x)) = σ_t^0(x0·τ(x1)) = σ_t^0(x0)·τ(x1)": "（τ(x1) 标量）",
+    "assert_E_commutes_with_flow": true,
+    "note": "E 保模流 ⟺ ρ 分解与 E 兼容（公理 4：E 由 ρ 生成）"
+  }
+}

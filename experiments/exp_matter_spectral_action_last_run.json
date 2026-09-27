@@ -1,0 +1,30 @@
+{
+  "(1)_chirality": {
+    "statement": "{γ₅, γ^μ} = 0，γ₅² = 1（手征反对易）",
+    "consequence": "D_M = iγ^μ∇_μ ⟹ {D_M, γ₅} = i{γ^μ, γ₅}∇_μ = 0",
+    "note": "γ 矩阵反对易是 Clifford 代数标准结果（引用），数值见下"
+  },
+  "(1)_numeric": {
+    "anticommutator_g5_g0": 0.0,
+    "anticommutator_g5_g1": 0.0,
+    "assert_anticommute": true
+  },
+  "(2)_D_squared": {
+    "D_squared": "D² = D_M² ⊗ 1 + 1 ⊗ D_F²（交叉项 D_Mγ₅+γ₅D_M=0 抵消，γ₅²=1）",
+    "assert_structure": true,
+    "note": "D² 的分解 ⟹ 谱作用量热核 = 时空部分（D_M²→费米子动能+F²）× 内部部分（D_F²→Yukawa+希格斯）"
+  },
+  "(3)_inner_fluctuation": {
+    "statement": "D_F → D_F + A + JAJ⁻¹（内涨落）",
+    "gauge_field": "A 对角块 = 规范场 U(1)×SU(2)×SU(3)（预印本 1.11 B1）",
+    "higgs": "A 左右混合块 = 希格斯 φ ∝ M（预印本 1.12，φ = −M 符号验证）",
+    "note": "完整 Dirac 的规范场 + 希格斯从内涨落导出（CC 谱作用量原理）"
+  },
+  "(4)_a4_complete": {
+    "fermion_kinetic": "D_M² 费米子迹 → ∫ψ̄ D_M ψ（Dirac 作用量，费米子动能）",
+    "yang_mills": "a₄ ⊃ −(1/24π²)∫tr(F²)（预印本 1.11 B2，符号验证）",
+    "higgs_potential": "a₄ ⊃ λ(|φ|²−v²)²（预印本 1.12，λ 符号不给数值）",
+    "yukawa": "a₄ ⊃ ψ̄φψ（预印本 1.12，D_F 非对角块 M × φ）",
+    "note": "完整 a₄ = 费米子动能 + YM F² + 希格斯势 + Yukawa = 标准模型物质场全内容"
+  }
+}

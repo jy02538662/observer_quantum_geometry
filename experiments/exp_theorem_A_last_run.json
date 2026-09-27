@@ -1,0 +1,35 @@
+{
+  "flat_metric_from_scale_invariance": {
+    "ds_std": 2.502751797331706e-16,
+    "ds_mean": 0.02314155872355825,
+    "assert_uniform_w_constant": true
+  },
+  "classical_limit": {
+    "N": [
+      64,
+      256,
+      1024,
+      4096
+    ],
+    "dixmier_lambda_c_finite": [
+      3.0739387505611977,
+      4.103252792764642,
+      5.055620145726454,
+      5.8162734152081095
+    ],
+    "dixmier_lambda_c_inf": [
+      5.244576171498781,
+      10.885131106670205,
+      26.09935183469997,
+      69.33823657532918
+    ],
+    "assert_finite_converges": true,
+    "assert_inf_diverges": true
+  },
+  "symbolic_lambda_c_limit": {
+    "rho_limit": "1/i",
+    "expected_1_over_i": "1/i",
+    "assert_power_law": true,
+    "note": "λ_c→∞ 恢复 ρ=C/λ 幂律（无特征尺度），观察者全知 = 无缺陷"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "palatini_diagonal_bg": {
+    "assert_dR_00": true,
+    "assert_dR_01": true,
+    "assert_dR_10": true,
+    "assert_dR_11": true
+  },
+  "conclusion": {
+    "statement": "δR_μν = ∇_ρ δΓ^ρ_μν − ∇_ν δΓ^ρ_μρ（Palatini 恒等式，维度无关，背景对角度规符号验证）",
+    "note": "这是 δ(∫R√g) 化简成 ∫G_μν δg^{μν}√g 的关键一步（边界项相消）"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "numeric_modular_flow": {
+    "homomorphism_err": 4.3423562568916755e-15,
+    "star_preserving_err": 0.0,
+    "trace_preserving_err": 0.0,
+    "rho_fixedpoint_err": 0.0
+  },
+  "numeric_generator": {
+    "generator_err": 2.042019495496715e-10,
+    "assert_matches_ilogrho": true
+  },
+  "symbolic_generator": {
+    "[log rho, E_01]": "Matrix([[0, log(a/b)], [0, 0]])",
+    "expected (ln a - ln b) E_01": "Matrix([[0, log(a) - log(b)], [0, 0]])",
+    "assert_match": true
+  }
+}

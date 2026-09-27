@@ -1,0 +1,20 @@
+{
+  "(1)_variation": {
+    "delta_F_sq": "δ(F^μν F_μν) = 2 F_μα F_ν^α δg^{μν}（F 与 g 无关，只有 g^{μν} 含 g）",
+    "T_munu_A": "T_μν^A = F_μα F_ν^α − (1/4) g_μν F²",
+    "trace": "T^A = g^{μν} T_μν^A = F² − F² = 0（4D 规范场 T 无迹，共形不变）",
+    "note": "变分 δ(∫F²√(−g)) 含两来源：δ(F²) 的 F_μαF_ν^α 项 + δ√(−g) 的 −(1/2)g_μν 项"
+  },
+  "(1)_numeric_traceless": {
+    "trace_T": -1.3322676295501878e-15,
+    "assert_traceless": true
+  },
+  "(2)_conservation": {
+    "statement": "∇^μ T_μν^A = 0（Noether 守恒）",
+    "proof_sketch": "∇^μ F_μα = 0（无源 YM）+ Bianchi ∇_μ F_να+∇_ν F_αμ+∇_α F_μν = 0 ⟹ F_μα ∇^μ F_ν^α = −(1/2)∇_ν F² ⟹ 两项抵消",
+    "status": "引用标准定理（Noether 第二定理 / YM 守恒），数值见下"
+  },
+  "(2)_numeric": {
+    "note": "恒定 F（∂F=0）⟹ ∂^μ T_μν=0 平凡；非平凡守恒需弯曲度规 ∇，是标准 Noether 结果"
+  }
+}

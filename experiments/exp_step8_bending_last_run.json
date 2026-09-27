@@ -1,0 +1,32 @@
+{
+  "numeric_bending_1d": {
+    "flat_is_linear": 0.0,
+    "defect_curvature_residual": 0.020055514479899967,
+    "assert_flat_linear": true,
+    "assert_defect_bent": true
+  },
+  "numeric_angle_defect": {
+    "valence4_flat": 0.0,
+    "valence3_positive": 1.5707963267948966,
+    "valence5_negative": -1.5707963267948966,
+    "assert_flat_zero": true
+  },
+  "numeric_cross_second_deriv": {
+    "R_max_amplitude": 0.1995891045603149,
+    "assert_nonzero": true
+  },
+  "symbolic_weak_field": {
+    "1/w_expansion": "-epsilon*phi(s) + 1",
+    "expected_1_minus_eps_phi": "-epsilon*phi(s) + 1",
+    "assert_first_order": true
+  },
+  "symbolic_metric_perturbation": {
+    "g_expansion": "2*epsilon*phi(s) + 1",
+    "expected_1_plus_2eps_phi": "2*epsilon*phi(s) + 1",
+    "assert_h_2eps_phi": true
+  },
+  "symbolic_scalar_curvature": {
+    "R_1d": "-Derivative(phi(s), (s, 2))",
+    "note": "1D 标量曲率 = −φ''；2D 弱场 R=−∂ₓ²h_yy−∂_y²h_xx（交叉二阶导，Q1 已解）"
+  }
+}

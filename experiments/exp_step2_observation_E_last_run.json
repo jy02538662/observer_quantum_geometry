@@ -1,0 +1,20 @@
+{
+  "numeric": {
+    "idempotent_E2_minus_E": 0.0,
+    "trace_preserving": 1.1102230246251565e-16,
+    "unit_preserving": 0.0
+  },
+  "positivity": {
+    "min_eigenvalue": 0.8189260199862174,
+    "assert_positive": true
+  },
+  "symbolic_idempotent": {
+    "E2_minus_E_zero": true
+  },
+  "symbolic_trace_preserving": {
+    "assert_equal": true
+  },
+  "symbolic_unit": {
+    "E1_minus_1_zero": true
+  }
+}

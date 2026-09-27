@@ -1,0 +1,39 @@
+{
+  "chiral_symmetry": {
+    "Gamma_D_plus_D_Gamma_norm": 0.0,
+    "assert_anticommute": true
+  },
+  "spectrum_pmE_paired": {
+    "n_positive": 30,
+    "n_negative": 30,
+    "max_pairing_error": 4.6629367034256575e-15,
+    "assert_paired": true
+  },
+  "fourier_duality": {
+    "F_Gamma_Fdag_minus_P_norm": 1.794768508529836e-14,
+    "assert_sublattice_valley_duality": true,
+    "meaning": "实空间子格二分 Γ = 动量空间谷平移 k->k+(π,π)，傅里叶对偶同一 Z₂"
+  },
+  "valley_swap": {
+    "dirac_point_1_index": [
+      2,
+      2
+    ],
+    "dirac_point_2_index": [
+      6,
+      6
+    ],
+    "P_maps_kd1_to_kd2": true,
+    "meaning": "P_{(π,π)} 把 Dirac 点 k_D 移到 -k_D（谷互换）"
+  },
+  "dirac_zero_modes": {
+    "n_zero_modes": 4,
+    "expect_4_for_N8": true
+  },
+  "honest_conclusion": {
+    "层次B严格化": "断裂（自旋=谷）= 手征（子格），是同一个 Z₂ 的实空间/动量空间两张脸",
+    "核心证据": "F Γ F† = P_{(π,π)}：子格二分 Γ 的傅里叶变换 = 谷平移（把两个 Dirac 点互换）",
+    "推论": "理论恰好两个独立 Z₂（手征 Γ = 断裂 + 共轭 K），Aut = S₃ -> su(3)，唯一性成立",
+    "状态": "层次 B 从「疑似成立」升级为「显式证明」（傅里叶对偶保 Z₂ 结构，坐实）"
+  }
+}

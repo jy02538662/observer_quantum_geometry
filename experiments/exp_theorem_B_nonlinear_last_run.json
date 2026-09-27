@@ -1,0 +1,24 @@
+{
+  "full_derivation": {
+    "Ric_xx": "-Derivative(phi(x, y), (x, 2)) - Derivative(phi(x, y), (y, 2))",
+    "Ric_yy": "-Derivative(phi(x, y), (x, 2)) - Derivative(phi(x, y), (y, 2))",
+    "Ric_xy": "0",
+    "R_scalar_computed": "2*(-Derivative(phi(x, y), (x, 2)) - Derivative(phi(x, y), (y, 2)))*exp(-2*phi(x, y))",
+    "R_liouville_expected": "2*(-Derivative(phi(x, y), (x, 2)) - Derivative(phi(x, y), (y, 2)))*exp(-2*phi(x, y))",
+    "assert_R_equals_liouville": true
+  },
+  "weak_field": {
+    "R(εψ) 展开到 ε²": "4*eps**2*psi(x, y)*Derivative(psi(x, y), (x, 2)) + 4*eps**2*psi(x, y)*Derivative(psi(x, y), (y, 2)) - 2*eps*Derivative(psi(x, y), (x, 2)) - 2*eps*Derivative(psi(x, y), (y, 2))",
+    "一阶项（衔接 Q1）": "-2*eps*(Derivative(psi(x, y), (x, 2)) + Derivative(psi(x, y), (y, 2)))",
+    "非线性项（首项）": "4ε²ψ∇²ψ（e^{−2φ} 因子展开的第 2 项）"
+  },
+  "numeric_verification": {
+    "phi_amplitude": 0.5,
+    "R_liouville_exact": 21.73910133805302,
+    "R_linear_weak_field": 7.997368451812524,
+    "R_discrete_ricci": 21.73910133805302,
+    "liouville_vs_linear_ratio": 2.7182818284589687,
+    "assert_liouville_matches_disc": true,
+    "assert_nonlinear_differs_from_linear": true
+  }
+}

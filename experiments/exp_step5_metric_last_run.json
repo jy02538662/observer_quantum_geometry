@@ -1,0 +1,34 @@
+{
+  "numeric_connes_distance": {
+    "sample": {
+      "(10, 50)": 0.2,
+      "(3, 180)": 0.885,
+      "(0, 199)": 0.995
+    },
+    "exact": {
+      "(10, 50)": 0.20100502512562812,
+      "(3, 180)": 0.8894472361809046,
+      "(0, 199)": 1.0
+    },
+    "sup_ratio_over_random_f": 0.2371942657287081,
+    "assert_ratio_le_1": true
+  },
+  "symbolic_D_commutator": {
+    "[D, s]_numeric_norm": 1.0,
+    "assert_norm_1": true
+  },
+  "symbolic_mean_value": {
+    "statement": "|f(s1)-f(s2)| ≤ ‖f'‖∞ |s1-s2|，取等 f(s)=s ⟹ d=|s1-s2|",
+    "equality_case": "f=s ⟹ |f(s1)-f(s2)|=|s1-s2|，且 ‖[D,s]‖=1（D=-i d/ds）"
+  },
+  "symbolic_derivation_commutator": {
+    "[d/ds, s] g  = g": "0",
+    "assert_leibniz": true
+  },
+  "symbolic_fourier_duality": {
+    "Tr_e^-tM^2": "sqrt(pi)/sqrt(t)",
+    "Tr_e^-tD^2": "sqrt(pi)/sqrt(t)",
+    "assert_equal": true,
+    "note": "高斯积分傅里叶不变：乘法型与导数型 theta-summable 迹相同"
+  }
+}

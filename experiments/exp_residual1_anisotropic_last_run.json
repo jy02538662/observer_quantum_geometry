@@ -1,0 +1,24 @@
+{
+  "argument": {
+    "scale_invariance": "log 坐标 s 上平移不变（ρ=C/λ ⟹ s 均匀）——只涉及径向 1D",
+    "conformal_invariance": "度规 g→Ω²g 的 Weyl 对称——涉及所有方向（含角向 S²）",
+    "conclusion": "缺陷 φ 破缺尺度不变（径向），角向 S² 不破缺 ⟹ 各向异性度规，非共形",
+    "correction": "上一轮「尺度不变⟹共形不变」是推断错误，已纠正"
+  },
+  "spherical_symmetric_R": {
+    "Ric_ss": "-Derivative(B(s), (s, 2))/B(s) + Derivative(B(s), s)**2/(2*B(s)**2) + Derivative(A(s), s)*Derivative(B(s), s)/(2*A(s)*B(s))",
+    "Ric_theta_theta": "1 - Derivative(B(s), (s, 2))/(2*A(s)) + Derivative(A(s), s)*Derivative(B(s), s)/(4*A(s)**2)",
+    "R_scalar": "2/B(s) - 2*Derivative(B(s), (s, 2))/(A(s)*B(s)) + Derivative(B(s), s)**2/(2*A(s)*B(s)**2) + Derivative(A(s), s)*Derivative(B(s), s)/(A(s)**2*B(s))"
+  },
+  "weak_field_anisotropic": {
+    "A=(1+εφ)², B=1": "径向破缺、角向不破缺（乘积空间）",
+    "R_linear": "2",
+    "note": "乘积空间（B=1）⟹ R=2 常数（纯角向 S² 曲率），径向缺陷不产生标量曲率"
+  },
+  "weak_field_fibration": {
+    "A=1+εφ, B=1+εψ": "径向+角向半径都破缺（纤维化）",
+    "R_linear": "-eps*(2*psi(s) + 2*Derivative(psi(s), (s, 2))) + 2",
+    "note": "纤维化（B(s) 随径向变）⟹ 径向缺陷通过 B 产生标量曲率（含 ψ'' 项）",
+    "insight": "OQG 弯曲 = 纤维化（紧化 S³：B=sin²s 随径向变），非乘积空间"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "scale_invariance": {
+    "cs": [
+      0.5,
+      2.0,
+      3.0
+    ],
+    "max_errors": [
+      0.0,
+      0.0,
+      2.7755575615628914e-17
+    ],
+    "assert_all_zero": true
+  },
+  "normalization": {
+    "discrete_sum": 1.0000008854198739,
+    "exact": 0.9999999999999999,
+    "assert_tau_rho_1": true
+  },
+  "symbolic_solution": {
+    "rho(c lambda)_minus_rho(lambda)/c": "0",
+    "assert_zero": true
+  },
+  "symbolic_f_invariant": {
+    "f(c lambda)_minus_f(lambda)": "0",
+    "assert_zero": true
+  },
+  "symbolic_log_translation_invariant": {
+    "g(s+t)_minus_g(s)": "0",
+    "assert_zero": true
+  }
+}

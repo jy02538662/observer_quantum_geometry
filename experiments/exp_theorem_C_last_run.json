@@ -1,0 +1,15 @@
+{
+  "numeric_E_preserves_modular_flow": {
+    "E_sigma_t_minus_sigma_t_E": 3.8208047553434667e-16,
+    "assert_commutes": true
+  },
+  "numeric_rho_fixedpoint": {
+    "sigma_t_rho_minus_rho": 0.0,
+    "assert_fixed": true
+  },
+  "symbolic_modular_preserves_trace": {
+    "tr([log rho, x])": "0",
+    "assert_zero": true,
+    "note": "τ∘σ_t=τ：生成元 i[logρ,·] 的迹 = 0（迹循环），故 E 保模流"
+  }
+}

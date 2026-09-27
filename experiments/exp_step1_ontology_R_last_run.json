@@ -1,0 +1,59 @@
+{
+  "infinite_dim": {
+    "n": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "dim_M": [
+      16,
+      256,
+      65536,
+      4294967296,
+      18446744073709551616,
+      340282366920938463463374607431768211456
+    ],
+    "assert_grows": true
+  },
+  "continuous_trace": {
+    "n": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "tau_of_rank1": [
+      0.25,
+      0.0625,
+      0.00390625,
+      1.52587890625e-05,
+      2.3283064365386963e-10,
+      5.421010862427522e-20
+    ],
+    "assert_decays_to_zero": true
+  },
+  "no_minimal_projection": {
+    "orthogonal": 0.0,
+    "nonzero": [
+      1.0,
+      1.0
+    ],
+    "sum_is_P_tensor_I": 0.0,
+    "assert_orthogonal": true
+  },
+  "symbolic_trace_compatibility": {
+    "tau_n": "x_00/2 + x_11/2",
+    "tau_np1": "x_00/2 + x_11/2",
+    "assert_equal": true
+  },
+  "symbolic_split_orthogonal": {
+    "P0P1": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+    "assert_zero": true,
+    "assert_nonzero_halves": true
+  }
+}

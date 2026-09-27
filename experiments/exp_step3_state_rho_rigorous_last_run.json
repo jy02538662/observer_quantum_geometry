@@ -1,0 +1,21 @@
+{
+  "(1)_f_invariant": {
+    "f(cλ)−f(λ) = cλ·ρ(λ)/c − λρ(λ)": "0",
+    "assert_zero": true
+  },
+  "(2)_g_translation_invariant": {
+    "g(s+t) = f(e^{s+t}) = f(e^t e^s)": "由 (1) f 尺度不变 ⟹ = f(e^s) = g(s)",
+    "assert_structure": true
+  },
+  "(3)_translation_invariant_implies_constant": {
+    "statement": "可测 g 满足 g(s+t)=g(s) ∀t ⟹ g 几乎处处常数",
+    "status": "引用标准定理（实分析/测度论：Lebesgue 测度平移不变，不变可测函数 a.e. 常数）",
+    "ref": "Folland, Real Analysis; 平移不变可测函数的经典结果"
+  },
+  "(4)_solution_check": {
+    "rho(cλ)": "C/(c*lambda)",
+    "rho(λ)/c": "C/(c*lambda)",
+    "assert_solution": true,
+    "conclusion": "ρ=C/λ 是唯一解（(1)(2)(3) ⟹ g 常数 ⟹ f 常数 ⟹ ρ=C/λ）"
+  }
+}

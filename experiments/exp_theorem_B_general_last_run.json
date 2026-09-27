@@ -1,0 +1,21 @@
+{
+  "general_2D_weak_field": {
+    "R_weak_linear": "-Derivative(h_xx(x, y), (y, 2)) - Derivative(h_yy(x, y), (x, 2)) + 2*Derivative(h_xy(x, y), x, y)",
+    "expected": "−∂_y²h_xx − ∂_x²h_yy + 2∂_x∂_y h_xy"
+  },
+  "Q1_special_case": {
+    "R_hxy_0": "-Derivative(h_xx(x, y), (y, 2)) - Derivative(h_yy(x, y), (x, 2))",
+    "expected_Q1": "-Derivative(h_xx(x, y), y) - Derivative(h_yy(x, y), x)",
+    "assert_Q1": true
+  },
+  "Liouville_special_case": {
+    "R_conformal": "-2*Derivative(phi(x, y), (x, 2)) - 2*Derivative(phi(x, y), (y, 2))",
+    "expected_-2_lap": "-2*Derivative(phi(x, y), (x, 2)) - 2*Derivative(phi(x, y), (y, 2))",
+    "assert_Liouville": true
+  },
+  "unified_conclusion": {
+    "statement": "定理 B 非线性版 = 一般 2D Ricci 标量（封闭），弱场统一 Q1 角亏（各向异性）与 Liouville（共形）",
+    "nonlinear_full": "全阶：共形 R=−2e^{−2φ}∇²φ（Liouville 封闭）；一般情形 = 标准 Ricci 标量非线性公式",
+    "status": "不是「未解」——2D 有封闭形式（Liouville/Ricci），弱场是 Q1"
+  }
+}

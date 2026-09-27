@@ -1,0 +1,22 @@
+{
+  "(1)_state": {
+    "omega_0(I)": "1",
+    "assert_normalized": true,
+    "linearity_omega(a x + b y)": "0",
+    "assert_linear": true,
+    "positivity": "ω(x†x)=τ(ρP x†x)/τ(ρP)≥0（τ 正、ρP≥0、x†x≥0 三者正 ⟹ 迹正）"
+  },
+  "(2)_point_distinction": {
+    "omega_0(P0)": "1",
+    "omega_0(P1)": "0",
+    "omega_0(P2)": "0",
+    "assert_delta": true,
+    "note": "谱投影正交 P_λP_μ=δ_λμP_λ ⟹ ω_λ(P_μ)=δ_λμ（原子态 = 点）"
+  },
+  "(3)_infinite_dimensional_link": {
+    "statement": "MASA ≅ L^∞(X,μ)，ω_λ 是支撑在单点 {λ} 的原子态（= 点）",
+    "status": "引用标准定理",
+    "ref": "Gelfand–Naimark（交换 C*-代数 ≅ C(X)，character=点）；Riesz 表示（L^∞ 正规态 ↔ 测度）",
+    "key_point": "P1 非交换 R 无 character；但 MASA 上态 ω_λ = 原子求值 ⟹ 点=态，非 character"
+  }
+}

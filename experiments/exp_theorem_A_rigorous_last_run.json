@@ -1,0 +1,17 @@
+{
+  "(b)_log_uniform": {
+    "geometric_ratio_implies_log_equal_spacing": "λ2/λ1=λ3/λ2 ⟹ log λ2−log λ1 = log λ3−log λ2（对数把等比转等差）",
+    "assert": true
+  },
+  "(e)_classical_limit": {
+    "lim_{λ_c→∞} (1/i)e^{−i/λ_c}": "1/i",
+    "expected_1_over_i": "1/i",
+    "assert_power_law": true
+  },
+  "references": {
+    "(a) 引用步骤 3": "函数方程 ρ(cλ)=c⁻¹ρ(λ) 唯一解 ρ=C/λ（exp_step3_state_rho_rigorous）",
+    "(c) 引用步骤 5": "Connes 距离 = |log λ₁−log λ₂|（exp_step5_metric_rigorous）",
+    "(f) 引用标准": "幂律 ρ=1/i 无特征尺度（尺度不变 = 无特征尺度，标准）",
+    "conclusion": "ρ=C/λ ⟹ 度规平直；λ_c→∞ ⟹ 无缺陷极限"
+  }
+}

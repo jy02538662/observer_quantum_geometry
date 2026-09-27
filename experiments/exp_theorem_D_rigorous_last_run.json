@@ -1,0 +1,21 @@
+{
+  "(c)_chebyshev_zero": {
+    "U_N(cos(π/(N+1))) = sin((N+1)θ)/sin θ = sin(π)/sin θ = 0": true,
+    "delta_N = 2cos(π/(N+1))": "θ=π/(N+1) ⟹ δ_N=2cos θ=2cos(π/(N+1))",
+    "ref": "第二类 Chebyshev U_n(cos θ)=sin((n+1)θ)/sin θ（标准）"
+  },
+  "(b)_max_strand": {
+    "statement": "最大弦数 N ⟹ 对称化子 f_N 存在、f_{N+1} 消失 ⟹ Δ_{N−1}≠0、Δ_N=0",
+    "status": "引用标准定理（Jones–Wenzl 幂等元 / SU(2)_k 截断）",
+    "ref": "Jones (1983); Wenzl (1987)"
+  },
+  "(d)_deficit_expansion": {
+    "2−δ_N 大 N 展开": "pi**2*(N - 2)/N**3",
+    "首项 π²/(N+1)²": "pi**2/(N + 1)**2",
+    "note": "破缺 = O(1/N²)，共形 anomaly 微观起源（修正路线图旧写 O(1/N)）"
+  },
+  "(d)_leading_term": {
+    "2(1−cos(π/(N+1))) 首项": "π²/(N+1)²（cos 泰勒：cos x = 1−x²/2+...）",
+    "assert_leading": true
+  }
+}

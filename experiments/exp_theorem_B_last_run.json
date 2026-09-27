@@ -1,0 +1,17 @@
+{
+  "symbolic_R_from_h": {
+    "h": "2*epsilon*phi(s)",
+    "R_1d": "-2*epsilon*Derivative(phi(s), (s, 2))",
+    "expected_-2eps_phipp": "-2*epsilon*Derivative(phi(s), (s, 2))",
+    "assert_match": true
+  },
+  "numeric_2D_R": {
+    "R_err_vs_exact": 0.00018270365487615958,
+    "assert_cross_second_deriv": true
+  },
+  "symbolic_higher_order": {
+    "inv_w_to_eps2": "epsilon**2*phi(s)**2 - epsilon*phi(s) + 1",
+    "note": "O(ε²) 项 φ² 存在 ⟹ 精确标量曲率含非线性项（弱场→全阶开放，不影响低能收敛 GR）",
+    "assert_nonlinear_term_present": true
+  }
+}
