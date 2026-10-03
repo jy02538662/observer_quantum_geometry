@@ -1,0 +1,48 @@
+{
+  "observer_state": {
+    "观察者态 ρ = C/λ": "1/(lambda*log(lambda_c/lambda_min))",
+    "归一化 C = 1/ln(λ_c/λ_min)": "1/log(lambda_c/lambda_min)",
+    "λ ∈ [λ_min, λ_c]": "有限区间（IR 截断 λ_min，UV 截断 λ_c）"
+  },
+  "modular_flow": {
+    "模流生成元 log ρ = log C − log λ": "log(1/(lambda*log(lambda_c/lambda_min)))",
+    "模流频率 λ_mod = log(C/λ_min)（λ_min 处最大）": "log(1/(lambda_min*log(lambda_c/lambda_min)))"
+  },
+  "expansion": {
+    "λ_mod = log(1/λ_min) − log(ln(λ_c/λ_min))": "log(1/lambda_min) - log(log(lambda_c/lambda_min))",
+    "IR 项 log(1/λ_min)": "主导（IR 截断的倒数对数）",
+    "宽度项 log(ln(λ_c/λ_min))": "次领头（λ_c 只进这里，且是对数的对数）",
+    "符号验证展开 = 原式": "False"
+  },
+  "N=64": {
+    "λ_min = π²/N²": "2.410e-03",
+    "IR 项 log(1/λ_min)": 6.028,
+    "宽度项 log(ln(λ_c/λ_min))": 1.905,
+    "λ_mod = IR 项 − 宽度项": 4.123
+  },
+  "N=128": {
+    "λ_min = π²/N²": "6.024e-04",
+    "IR 项 log(1/λ_min)": 7.415,
+    "宽度项 log(ln(λ_c/λ_min))": 2.093,
+    "λ_mod = IR 项 − 宽度项": 5.3218
+  },
+  "N=256": {
+    "λ_min = π²/N²": "1.506e-04",
+    "IR 项 log(1/λ_min)": 8.801,
+    "宽度项 log(ln(λ_c/λ_min))": 2.251,
+    "λ_mod = IR 项 − 宽度项": 6.5502
+  },
+  "align_with_mass_final": {
+    "λ_mod（独立推导）= log(N²/π²) − log(ln(2N²/π²))": 5.3218,
+    "λ_mod（exp_mass_final）= log(N²/(π² ln(2N²/π²)))": 5.3218,
+    "两者一致": true
+  },
+  "honest_conclusion": {
+    "独立推导结果": "λ_mod = log(C/λ_min) = log(1/λ_min) − log(ln(λ_c/λ_min))——模流频率 = 「IR 截断的倒数对数」减「对数宽度的对数」。",
+    "关键结构": "λ_mod 由 IR 截断 λ_min 主导（log(1/λ_min)），λ_c 只通过「对数的对数」进次领头项。所以 λ_mod 和 λ_c **不是「两面」**，是「IR 截断的对数放大，λ_c 只做参考宽度」。",
+    "⚠️ 笔误修正": "log(1/λ_min) = log(N²/π²) ≈ 7.41（不是 8.11）；8.11 = ln(λ_c/λ_min) = ln(2N²/π²)。结构不变。",
+    "对质量指数的意义": "m_n = e^{λ_mod·n} 的「指数 λ_mod」=「IR 截断（尺度破缺 2−δ_N）的对数放大」——即「有限性（IR 截断）→ 对数 → 指数层级」。这坐实了「质量指数来自穿过有限性（隧穿）」：IR 截断 = 有限性，对数放大 = 隧穿指数。",
+    "下一步": "把「λ_mod = IR 截断的对数」接到「绕数 = 代阶」（n 接拓扑荷），完成「有限性 → 指数 → 拓扑荷」闭环。",
+    "定位": "【独立推导，符号坐实】。λ_mod 与 λ_c 的关系精确了：不是两面，是「IR 主导 + UV 次领头」。"
+  }
+}

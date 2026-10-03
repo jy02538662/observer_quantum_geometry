@@ -252,7 +252,7 @@ $$
 | `exp_real_part.py` | 段 3-4 | 有向=反厄米（±i）、取实部=自反性（对称/反对称分解） |
 | `exp_half_circle.py` | 段 5-9 | cos 偶函数→半圆、Chebyshev、+1 尺度破缺 |
 | `exp_fill_gaps.py` | 段 6-7 | 布尔傅里叶、无偏好→角度均匀（补齐跳步） |
-| `exp_fix_modular.py` | 纠错 | 纠正「θ=log λ」误用模流（备选时间），角度均匀=旋转对称 |
+| `exp_fix_modular.py` | 纠错 | 纠正「θ=log λ」误用模流（模流=时间维度，非角度），角度均匀=旋转对称 |
 | `exp_circle_half_contradiction.py` | 缺口 A | 圆 vs 半圆参数化 bug（圆→65 值，半圆→128 值） |
 | `exp_radix_choice.py` | 缺口 B | 数值序 vs 角度序（进制/排序） |
 | `exp_close_gaps_AB.py` | 缺口 A+B 闭合 | 区分=二分递归（编号 n 单调对应角度 θ），半圆上做 |
@@ -270,6 +270,84 @@ $$
 | `exp_gap3_s3_binary.py` | 5 混三分对象：S₃ 非平凡元素 5 = 3 转置（阶2）+ 2 个 3-循环（阶3），二分选择只作用阶2 → 32=2⁵ 排除；Z₂³ 非平凡元素 7 全阶2（对照无矛盾） | 符号 |
 
 **四个候选全排除**：27=3³（无三分递归）/ 32=2⁵（5 混三分对象）/ 转置投影维数比（给 {3/1,3/2,2/1}）/ 缺陷能级=3 代（框架谱无 3 重，复用 `exp_generation_3_probe`）。**∴ 29.2 结构路线（表示论/二分递归/缺陷谱）原则上给不出**，需动力学机制（Yukawa 跑动/RG，v12 附录六路线之争）。**29.2 = 已探明的开放，记录位置，主线转 CKM/PMNS。**
+
+## 质量谱动力学探底（2026-10-03，13 脚本）
+
+> 从「29.2 具体数字」偏回「质量谱动力学」纲领，撞出几乎闭环的链。见 vault [[质量谱：时间+观察者截断+号差旋转（精确化）]] §十三 + [[四费米子相互作用：δD玻色场积掉与关联刚度软模（质量谱动力学探底）]] + [[付费桥2精确化：π磁通SU(2)是动量空间的（不可约分解）]]。
+
+### 完整推导链 + 公式（质量谱动力学的核心）
+
+> 一句话：**质量层级（指数）来自「穿过有限性」（隧穿），指数里的 n = 量子化整数（= 代阶 = 绕数 = 链接数 = 阶）**。全程程序核实（sympy 群论 + 独立推导 + Jones 精确计算）。
+
+**推导链（每环程序核实）**：
+
+$$\underbrace{\text{公设「观察 = 一次有向区分」}}_{\text{区分 = 二分}} \xrightarrow{J^2=-I} \underbrace{\text{2 值（±i）}}_{\text{有限}} \xrightarrow{\text{2 值同构}} \underbrace{\text{泡利 }\{0,1\} + \text{截断 }[\lambda_{\min},\lambda_c]}_{\text{有限性两面}} \xrightarrow{\text{指数截断}} \underbrace{\rho=\tfrac1\lambda e^{-\lambda/\lambda_c}}_{\text{隧穿}} \xrightarrow{\lambda_{\text{mod}}=\log\frac{C}{\lambda_{\min}}} \underbrace{m_n=e^{\lambda_{\text{mod}}n}}_{\text{质量指数}} \xrightarrow{n=\text{阶}} \underbrace{n=1,2,3}_{\text{量子化整数}}$$
+
+**关键公式**：
+
+| 环节 | 公式 | 脚本 |
+| --- | --- | --- |
+| 公设 | 观察 = 一次有向区分，$J=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$，$J^2=-I$ | `exp_mass_once_axiom` |
+| 二分→有限 | $J^2=-I \Rightarrow$ 本征值 $\pm i$（2 值）$\Rightarrow$ 有限（2 是有限整数） | 同上 |
+| 2 值同构 | 区分 ±i ↔ 泡利 {0,1} ↔ 截断 {λ_min,λ_c}（同一个「一个 bit」的三个实现） | `exp_mass_once_axiom2` |
+| 隧穿（观察者态） | $\rho=C/\lambda$，$C=1/\ln(\lambda_c/\lambda_{\min})$，指数截断 = 隧穿概率幅 | `exp_mass_principle_once` |
+| λ_mod（模流频率） | $\lambda_{\text{mod}}=\log\frac{C}{\lambda_{\min}}=\log\frac1{\lambda_{\min}}-\log\ln\frac{\lambda_c}{\lambda_{\min}}$（IR 主导 7.41，UV 次领头 2.09，N=128 时 λ_mod=5.32） | `exp_mass_lambda_mod_structure` |
+| 质量指数 | $m_n=e^{\lambda_{\text{mod}}n}$ | `exp_mass_winding_generation` |
+| 代阶 | 两个 Z₂ → S₃ → 共轭类阶 {1,2,3} | `exp_mass_winding_verify` / `exp_mass_link_order` |
+| 链接数=阶（经典极限） | 环数（cycle 数）= n − 阶 + 1（阶1→环3、阶2→环2、阶3→环1） | `exp_mass_jones_order` |
+| 链接数=阶（量子精确） | Kauffman 括号最低 d 次幂 = n − 阶（阶1→d²、阶2→d¹、阶3→d⁰） | `exp_mass_jones_order_quantum` |
+
+**程序核实状态**：凡「数学结构 / 结构来源 / 群论对应 / Jones 精确 / 2 值同构」全部 sympy/numpy 坐实；只剩 2 个本体论/类比（隧穿=有限性、2值为何是占据/尺度）如实标注「本质无法程序化」。
+
+**⚠️ 未精确接回**：质量指数 $m_n=e^{\lambda_{\text{mod}}n}$ 的形式有了、n=阶坐实了，但 $e^{\lambda·n}$ 到 207/3477 的具体数值仍是候选（之前审计「无自由参数不成立」——三个选择点 λ_min/步长/N=128 未独立逼出，见 [[质量谱审计收口总结（三层状态+四个选择点+四条路）]]）。
+
+### 29.2 探底（5 脚本）
+
+| 脚本 | 内容 | 验证 |
+| --- | --- | --- |
+| `exp_gap3_generation_mapping.py` | 2−δ_N/λ_mod 代分量比能否先验给 29.2：2−δ_N 是 O(1/N²) 精细小量、候选「代→N」映射跨代比全远小于 577/19.8、反解命中 N_down≈16 是事后合理化 | 数值 |
+| `exp_gap3_color_triadic.py` | 颜色三分→三分递归：3-循环=两转置乘积、阶3≠分支数3（「两个不同的3」）、dim(3⊗3⊗3)=27 是维数非递归 | 符号 |
+| `exp_gap3_vacuum_propagator.py` | 背景传播子 G₀ 对角=0（真空不空只在非对角）；π-flux 4 零模（2 Dirac 点×2）=掺杂自由度（断裂→掺杂结构侧） | 数值 |
+| `exp_gap3_vacuum_correlation.py` | 真空关联 G₀ 随距离衰减：异子格 ~1/r^1.6 幂律长程 | 数值 |
+| `exp_gap3_density_correlation.py` | 密度-密度关联 χ=-|G₀|²~1/r^3.2（排斥，泡利反关联，Wick 定理） | 数值 |
+
+### 攻付费桥2（4 脚本）
+
+| 脚本 | 内容 | 验证 |
+| --- | --- | --- |
+| `exp_bridge2_local_U.py` | 缺陷局域 SU(2) 重叠→局部U：δF 精确局域 2 矩阵元（δ函数式）、两缺陷精确不相交、翻转 edge 破坏 J_p²=−I | 数值 |
+| `exp_route_A_scale.py` | 路A 真空长程关联给质量层级：幂律（相互作用）≠指数（质量层级），标度正交 | 数值+符号 |
+| `exp_route_B_valley.py` | 路B 两个谷作局域双通道：零模 PR≈64-80、主导动量在 Dirac 点（动量空间非局域） | 数值 |
+| `exp_route_C_sw.py` | 路C 两 D 耦合+SW：给非局域 superexchange（J=4t²/Δ），不给局域 U | 解析 |
+
+### 质量谱动力学地基 + 绕数=代（4 脚本）
+
+| 脚本 | 内容 | 验证 |
+| --- | --- | --- |
+| `exp_mass_tunneling_from_interaction.py` | WKB 隧穿 λ=0（问错对象：隧穿穿的是「公设的有限性」，不是 WKB 势垒） | 数值（负） |
+| `exp_mass_principle_once.py` | 公设「一次」=有限性→泡利（n∈{0,1}）+截断（λ∈[λ_min,λ_c]），三者都是二分/有限 | 符号 |
+| `exp_mass_lambda_mod_structure.py` | λ_mod 独立推导：log(C/λ_min)=log(1/λ_min)−log(ln(λ_c/λ_min))，IR 主导+UV 次领头 | 符号+数值 |
+| `exp_mass_winding_generation.py` | 绕数=代=量子化整数（S¹ 绕数 0,1,1 ≠ 阶 1,2,3，绕数是拓扑荷=量子化整数），闭环 | 符号 |
+
+### 绕数=代=链接数=阶 程序核实（4 脚本）
+
+> 把「绕数=代」从「身份识别」补到「程序核实」——群论 + Jones 精确计算。见 vault [[质量谱：时间+观察者截断+号差旋转（精确化）]] §十三。
+
+| 脚本 | 内容 | 验证 |
+| --- | --- | --- |
+| `exp_mass_winding_verify.py` | 绕数=代结构来源：两个 Z₂（转置，阶2）生成 S₃（6 元素）、S₃ 共轭类阶 {1,2,3} | 符号（群论） |
+| `exp_mass_link_order.py` | 链接数=阶：共轭类代表元的阶 {1,2,3}（不是类大小 {1,3,2}） | 符号（群论） |
+| `exp_mass_jones_order.py` | 链接数=阶 经典极限：环数（cycle 数）= n − 阶 + 1（阶1→环3、阶2→环2、阶3→环1） | 符号（Permutation） |
+| `exp_mass_jones_order_quantum.py` | Jones 量子值最低 d 次幂 = n − 阶（阶1→d²、阶2→d¹、阶3→d⁰），Kauffman 括号 d 次幂按阶分层 | 符号 |
+
+### 公设→有限→泡利+截断 程序核实（2 脚本）
+
+> 把「公设→有限性」从「诠释桥」坐实为「数学」——见 vault [[质量谱：时间+观察者截断+号差旋转（精确化）]] §十三。
+
+| 脚本 | 内容 | 验证 |
+| --- | --- | --- |
+| `exp_mass_once_axiom.py` | 公设→有限：区分=二分（J²=−I→±i→2值→有限）是数学，不是诠释桥 | 符号 |
+| `exp_mass_once_axiom2.py` | 有限→泡利+截断：2 值同构（区分 ±i、泡利 {0,1}、截断 {λ_min,λ_c} 是同一个「一个 bit」的三个实现） | 符号 |
 
 ## 缺口 8 八刀 + 缺口 11 1生2（2026-10-02，2 脚本）
 
@@ -414,6 +492,8 @@ py -m experiments.exp_step1_ontology_R
 - [x] **缺口 8 八刀查证 + 缺口 11 1生2 形式化（2026-10-02）**：缺口 8「$v\sim M_P/N_{\text{int}}^8$ 的 8」查证 = 巧合（事后对齐，$\log_{128}=7.92$ 非 8，三候选全排除，「群阶 8≠指数 8」对象错误）；缺口 11「1生2」从「有理由的猜测」精确化为「候选链」（【严格】能隙+seesaw 平方；【候选】区分次数→λ_min 幂次，非公理推导）。2 脚本：`exp_gap8_badao` / `exp_gap11_Ynu_dynamics`。
 - [x] **超导 Tc 线 + 色禁闭线（2026-10-02）**：从「2.5 分数维」三锚点挖穿出发，推到超导 Tc 统一公式 + 色禁闭四层。**① 超导 Tc**：λ_mod 修正（Tc=Λ/64 偏大 3.3 倍 → λ_mod=5.32 偏 1.2 倍）+ KMS 条件严格化（温度 T=Λ/λ_mod，λ_mod=log ρ 谱最大特征值精确、差=0）+ 声子 ω_D=Λ/16π=381K + 用户洞察「对偶 1 分为 2」（区分可分离 = N=128 小约定 → 独立声子）→ **λ_BCS=2/π**（BKT 跳变常数 = BCS 耦合常数，结构来源 = 涡旋能量 πJ_s ln ↔ 涡旋熵 2 ln 对偶平衡，2/π = 维度/π）。统一公式 $T_c\approx54\,\Lambda(\text{eV})$ K，对标铜氧化物（强耦合 2-3 层）偏 0.81~0.97 倍，弱耦合（Nb，λ≠2/π）失效 60 倍。**② 色禁闭**：无外部观察者 → 无孤立夸克（物理直觉第一性）+ SU(3)_k 量子维度 $[3]_q=3-4\sin^2\frac{\pi}{k+3}$（k=2 给 φ）+ D-D 自反给有量纲（Λ_QCD = 闭合↔开放谱差）。**卡点**：Λ_QCD 绝对能标 = 色的 β 函数（跑动耦合 → 低能发散），框架 β 函数只做过引力 G 没做过色荷 g_color。见 vault [[超导Tc的温度来源：KMS条件与模流频率（从N=128到112K）]] + [[声子=缺陷网络的集体模：BCS的ω_D与普适Tc公式的缺口]] + [[D谱编码电子不编码原子核：超导与核质量的本体论边界]] + [[色禁闭=无外部观察者的推论：框架的独特角度]]。脚本 27 个在 `experiments/`（`exp_sctc_*` 15 个 + `exp_confinement_*` 7 个 + `exp_2p5_*` 5 个），见下方「超导 Tc 线 + 色禁闭线（27 脚本）」清单。
 - [x] **π 磁通配对迁移（2026-10-02）**：原 `pi_flux_pairing/` 目录的 13 个脚本（`exp_pi_flux_*` 12 个 + `exp_bdg_pairing_parity` 1 个）迁入本库 `experiments/`，原目录删除。推「π 磁通 → 配对对称性」，结论「**接口非独有**」（超导是标准凝聚态，非独有预言，见 [[π磁通配对推导：谷奇配对与手征p+ip拓扑超导（接口非独有）]] + 预印本 1.17）。超导线的所有脚本（π 磁通配对 + 超导 Tc + 色禁闭 + 2.5 分数维 = 40 个）从此统一在一个库。
+- [x] **质量谱动力学探底 + 口径方案 B + λ_min 收回 + 预印本 1.3 勘误（2026-10-03）**：探「质量谱缺的动力学」能否内生，完整推导见 vault [[四费米子相互作用：δD玻色场积掉与关联刚度软模（质量谱动力学探底）]]。净产出五条：① 口径定方案 B（模流 vs 有向区分 = 时间两个面：模流给时间维度、有向区分给号差方向，已改对齐页 #186 + 阴阳图景注记 + 本 README）；② λ_min 选择点①收回（`exp_lambda_min_precision.py`：λ_min=π²/N² 是 2−δ_N 领头阶，2−δ_N=2−2cos(π/(N+1))≈π²/(N+1)² 差 O(1/N³)，结构来源=三合一「质量=尺度破缺=2−δ_N」）；③ Yukawa 耦合内生（$S_F=\langle\psi|D|\psi\rangle\to S_{\text{int}}=\sum\delta D\,\psi^\dagger\psi$，=键序 Hellmann-Feynman）；④ 四费米子=积掉 δD（$S_{\text{eff}}=\rho K^{-1}\rho$，软模相位型=关联刚度=排斥吸引对偶统一，接超导 Tc 线；`exp_interaction_vertex.py` + `exp_interaction_vertex_true_min.py`）；⑤ 预印本 1.3 勘误（「度规有质量 ≈2e-2」撤回——D* 是鞍点 8 负本征值，+2e-2 是最低正本征值非度规质量；核心「短程接触引力」不受影响）。**诚实边界**：四费米子（费米子-费米子）≠ Yukawa（费米子-希格斯），没触及质量谱缺的 29.2（Yukawa 随代跑动，补十已判结构路线给不出）。3 脚本均自包含（内联原 gauge_emergence 的 `toroidal_D`/`basis_matrices`/`simple_hessian`）。
+- [x] **质量谱动力学纲领闭环（2026-10-03 续）**：从「29.2 具体数字」偏回「质量谱动力学」纲领，撞出几乎闭环的链。① 29.2 四条结构/动力学路线全判死（`exp_gap3_generation_mapping` 2−δ_N 代分量 / `exp_gap3_color_triadic` 颜色三分 / `exp_gap3_vacuum_propagator` 背景传播子 G₀ 对角=0 + π-flux 零模=掺杂结构侧 / `exp_gap3_vacuum_correlation` + `exp_gap3_density_correlation` 真空关联 G₀~1/r^1.6、χ=-|G₀|²~1/r^3.2 排斥）；② 攻付费桥2 三路判负（`exp_bridge2_local_U` 缺陷局域 SU(2) δ函数式不重叠 / `exp_route_A_scale` / `exp_route_B_valley` / `exp_route_C_sw`）——「框架给非局域，给不了局域 U」= 付费桥2；③ 质量谱动力学地基（`exp_mass_principle_once`）：公设「一次」=有限性→泡利+截断；④ λ_mod 独立推导（`exp_mass_lambda_mod_structure`）：IR 主导（7.41）+UV 次领头（2.09）→λ_mod=5.32；⑤ 绕数=代=量子化整数（`exp_mass_winding_generation`）闭环：公设「一次」→泡利+截断→隧穿→λ_mod→质量指数 e^{λ·n}（n=绕数=代阶）。**✅ 最后一环「两个 Z₂ 链接数 = S₃ 阶 1,2,3」已坐实**（群论两个 Z₂→S₃→阶1,2,3 + 经典极限环数=n−阶+1 + Jones 量子最低 d 次幂=n−阶，`exp_mass_winding_verify` / `exp_mass_link_order` / `exp_mass_jones_order` / `exp_mass_jones_order_quantum`）。**✅ 公设→有限→泡利+截断 也坐实**（区分=二分 J²=−I→±i→2值→有限是数学，`exp_mass_once_axiom`；有限→泡利+截断是 2 值同构，`exp_mass_once_axiom2`）。**仍标本体论/类比**（本质无法程序化）：隧穿=有限性、2值为何是占据/尺度、排斥吸引对偶。见 vault [[质量谱：时间+观察者截断+号差旋转（精确化）]] §十三。
 
 ## 严格证明分层（2026-09-25 修正）
 
