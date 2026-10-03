@@ -1,0 +1,37 @@
+{
+  "results": {
+    "T0.7": {
+      "Js": 0.7657,
+      "Js_over_T": 1.0939
+    },
+    "T0.8": {
+      "Js": 0.6887,
+      "Js_over_T": 0.8609
+    },
+    "T0.85": {
+      "Js": 0.6675,
+      "Js_over_T": 0.7853
+    },
+    "T0.9": {
+      "Js": 0.6906,
+      "Js_over_T": 0.7674
+    },
+    "T0.95": {
+      "Js": 0.5967,
+      "Js_over_T": 0.6281
+    },
+    "T1.0": {
+      "Js": 0.5356,
+      "Js_over_T": 0.5356
+    },
+    "T1.1": {
+      "Js": 0.5021,
+      "Js_over_T": 0.4564
+    }
+  },
+  "question": "does the duality-derived T_c = π J_s/2 hold, i.e. is there a BKT universal jump J_s(T_c)/T_c = 2/π?",
+  "target_2_over_pi": 0.6366,
+  "best_T": 0.95,
+  "best_ratio": 0.6281,
+  "verdict": "TO BE FILLED AFTER RUN"
+}

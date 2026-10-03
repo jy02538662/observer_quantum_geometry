@@ -1,0 +1,8 @@
+{
+  "J_ok": true,
+  "GammaJ_ok": true,
+  "Delta_antisym": true,
+  "J_commutes_Delta": true,
+  "J_anti_commutes_Delta": false,
+  "T_prime_survives": true
+}

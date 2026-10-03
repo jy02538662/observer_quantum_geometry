@@ -1,0 +1,63 @@
+{
+  "results": {
+    "bound0": {
+      "E": -6.7606,
+      "Lz": -0.0
+    },
+    "bound1": {
+      "E": -5.6859,
+      "Lz": 0.0
+    },
+    "bound2": {
+      "E": -5.6859,
+      "Lz": -0.0
+    },
+    "bound3": {
+      "E": -4.9111,
+      "Lz": -0.0
+    },
+    "bound4": {
+      "E": -4.791,
+      "Lz": 0.0
+    },
+    "bound5": {
+      "E": -4.7308,
+      "Lz": 0.0
+    },
+    "bound6": {
+      "E": -4.3187,
+      "Lz": 0.0
+    },
+    "bound7": {
+      "E": -4.3187,
+      "Lz": 0.0
+    },
+    "bound8": {
+      "E": -4.0127,
+      "Lz": 0.0
+    },
+    "bound9": {
+      "E": -4.0127,
+      "Lz": -0.0
+    },
+    "bound10": {
+      "E": -4.0049,
+      "Lz": 0.0
+    },
+    "bound11": {
+      "E": -3.9656,
+      "Lz": -0.0
+    },
+    "bound12": {
+      "E": -3.9656,
+      "Lz": -0.0
+    },
+    "bound13": {
+      "E": -3.9554,
+      "Lz": -0.0
+    }
+  },
+  "question": "does angular momentum produce a centrifugal repulsion (kinetic-energy level), conjugate to the attraction (potential-energy level)?",
+  "verdict": "TO BE FILLED AFTER RUN",
+  "note": "centrifugal repulsion = bound-state energy rises with |m| (L^2/2mr^2 barrier); this is 'repulsion' at the momentum/kinetic level, conjugate to attraction at position/potential level"
+}

@@ -1,0 +1,50 @@
+{
+  "scan": {
+    "0.0": {
+      "dn": -0.0,
+      "dEF": 0.0,
+      "T_BKT": 0.0
+    },
+    "0.5": {
+      "dn": 0.0079,
+      "dEF": 0.1179,
+      "T_BKT": 0.00368
+    },
+    "1.0": {
+      "dn": 0.0156,
+      "dEF": 0.2409,
+      "T_BKT": 0.00753
+    },
+    "1.5": {
+      "dn": 0.0226,
+      "dEF": 0.359,
+      "T_BKT": 0.01122
+    },
+    "2.0": {
+      "dn": 0.0288,
+      "dEF": 0.4663,
+      "T_BKT": 0.01457
+    },
+    "3.0": {
+      "dn": 0.0388,
+      "dEF": 0.643,
+      "T_BKT": 0.02009
+    },
+    "4.0": {
+      "dn": 0.0459,
+      "dEF": 0.7745,
+      "T_BKT": 0.0242
+    },
+    "5.0": {
+      "dn": 0.0509,
+      "dEF": 0.8726,
+      "T_BKT": 0.02727
+    }
+  },
+  "dome": "Tc = min(T_BKT, T_mf) gives dome (underdoped BKT-rise, overdoped pairing-drop)",
+  "question": "does the new mechanism (doping = D-D Fermi level difference) close the chain doping -> mu -> T_BKT -> dome?",
+  "closed": true,
+  "underdoped": "T_BKT = mu/32 rises monotonically with Vdef (Uemura segment)",
+  "breakthrough": "mu now endogenous (from D-D Fermi level difference), continuous, filling the discrete->continuous gap",
+  "boundary": "mu_eff=dEF is a proxy; exact transfer<->mu needs n∝mu² DOS relation; T_mf overdoped form is phenomenological (V_eff boundary, same as 1.17)"
+}

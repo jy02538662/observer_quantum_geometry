@@ -1,0 +1,61 @@
+{
+  "results": {
+    "d1": {
+      "zero_modes": [
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "split": 1.0
+    },
+    "d2": {
+      "zero_modes": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "split": -0.0
+    },
+    "d3": {
+      "zero_modes": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "split": -0.0
+    },
+    "d4": {
+      "zero_modes": [
+        0.5,
+        -0.5,
+        0.5,
+        -0.5
+      ],
+      "split": -1.0
+    },
+    "d6": {
+      "zero_modes": [
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "split": 1.0
+    },
+    "d8": {
+      "zero_modes": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5
+      ],
+      "split": -0.0
+    }
+  },
+  "question": "does a π-flux vortex carry a zero mode, and do two π-flux vortices hybridize (repulsion = hybridization grows as they approach)?",
+  "verdict": "TO BE FILLED AFTER RUN",
+  "note": "π-flux = winding +1/2; staggered mass opens gap so bound zero mode is isolated; observable = zero-mode hybridization"
+}

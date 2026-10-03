@@ -1,0 +1,24 @@
+{
+  "question": "classify pairing in the full 4x4 (sublattice x valley) space: does intrinsic Kramers T'^2=-1 survive pairing (DIII) or get broken (D)?",
+  "symmetry": {
+    "Gamma2": 1,
+    "J2": -1,
+    "GammaJ": "-JGamma (Dirac-type DIII)"
+  },
+  "fermi_allowed_pairings": [
+    "I⊗τy",
+    "σx⊗τy",
+    "σy⊗I",
+    "σy⊗τx",
+    "σy⊗τz",
+    "σz⊗τy"
+  ],
+  "verdict": {
+    "I⊗τy": "D（T'破，单Majorana）",
+    "σx⊗τy": "D（T'破，单Majorana）",
+    "σy⊗I": "DIII（T'存活，Kramers对Majorana）",
+    "σy⊗τx": "D（T'破，单Majorana）",
+    "σy⊗τz": "D（T'破，单Majorana）",
+    "σz⊗τy": "DIII（T'存活，Kramers对Majorana）"
+  }
+}

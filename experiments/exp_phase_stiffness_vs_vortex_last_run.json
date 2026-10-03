@@ -1,0 +1,28 @@
+{
+  "results": {
+    "L8": {
+      "dE": 8.7257
+    },
+    "L12": {
+      "dE": 10.0197
+    },
+    "L16": {
+      "dE": 10.934
+    },
+    "L24": {
+      "dE": 12.2186
+    },
+    "L32": {
+      "dE": 13.128
+    },
+    "L48": {
+      "dE": 14.4075
+    }
+  },
+  "question": "is centrifugal repulsion (vortex energy) the same thing as phase stiffness?",
+  "vortex_energy_fit": "dE = 3.171 ln(L) + 2.139",
+  "expected_A": 3.1416,
+  "ratio": 1.009,
+  "verdict": "可能 A：涡旋能量 = π·J_s·ln(L/a) ∝ 相位刚度，已包含在 BKT 里，无独特公式",
+  "note": "if vortex energy = pi*Js*ln(L/a), then centrifugal repulsion is a FUNCTION of phase stiffness (already in BKT), NOT an independent extra term -> no unique formula (case A)"
+}

@@ -1,0 +1,51 @@
+{
+  "results": {
+    "1": {
+      "dn": 0.0288,
+      "mu_eff": 0.6017,
+      "T_BKT": 0.0188
+    },
+    "3": {
+      "dn": 0.0323,
+      "mu_eff": 0.6373,
+      "T_BKT": 0.01992
+    },
+    "6": {
+      "dn": 0.045,
+      "mu_eff": 0.7516,
+      "T_BKT": 0.02349
+    },
+    "9": {
+      "dn": 0.0581,
+      "mu_eff": 0.8545,
+      "T_BKT": 0.0267
+    },
+    "12": {
+      "dn": 0.1008,
+      "mu_eff": 1.1255,
+      "T_BKT": 0.03517
+    },
+    "18": {
+      "dn": 0.1828,
+      "mu_eff": 1.5155,
+      "T_BKT": 0.04736
+    },
+    "24": {
+      "dn": 0.3016,
+      "mu_eff": 1.9467,
+      "T_BKT": 0.06083
+    },
+    "30": {
+      "dn": 0.4151,
+      "mu_eff": 2.284,
+      "T_BKT": 0.07138
+    }
+  },
+  "question": "does the charge-transfer mechanism scale to the cuprate doping range?",
+  "transfer_range": "Δn 0.03 -> 0.42 (impurity concentration 3% -> 83%)",
+  "mu_eff_range": "0.6 -> 2.3 (t unit), covering cuprate μ~0.1-0.5 eV order",
+  "T_BKT_range": "0.02 -> 0.07 (t unit) ~ hundreds of K, order correct",
+  "key_insight": "spatially-inhomogeneous potential (impurity) gives transfer; uniform potential (staggered mass) gives zero transfer (no spatial polarization)",
+  "verdict": "full chain closed: impurity concentration -> charge transfer -> mu_eff=sqrt(4πΔn) -> T_BKT, with correct order of magnitude",
+  "boundary": "mu_eff=sqrt(4πΔn) is DOS-integral inverse (n∝μ² exact only in thermodynamic limit); impurity is proxy for chemical doping; overdoped T_mf phenomenological"
+}

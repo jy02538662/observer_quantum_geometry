@@ -1,0 +1,39 @@
+{
+  "results": {
+    "Vdef0.0_tp0.3": {
+      "n_left": 18.0,
+      "n_right": 18.0,
+      "transfer": 0.0
+    },
+    "Vdef0.0_tp1.0": {
+      "n_left": 18.0,
+      "n_right": 18.0,
+      "transfer": -0.0
+    },
+    "Vdef1.0_tp0.3": {
+      "n_left": 18.002,
+      "n_right": 17.998,
+      "transfer": 0.003
+    },
+    "Vdef1.0_tp1.0": {
+      "n_left": 18.016,
+      "n_right": 17.984,
+      "transfer": 0.031
+    },
+    "Vdef2.0_tp0.3": {
+      "n_left": 18.003,
+      "n_right": 17.997,
+      "transfer": 0.006
+    },
+    "Vdef2.0_tp1.0": {
+      "n_left": 18.029,
+      "n_right": 17.971,
+      "transfer": 0.058
+    }
+  },
+  "question": "does the D-D self-adjoint coupling + spectral asymmetry give charge transfer (= doping) without input mu?",
+  "mechanism": "spectral asymmetry (defect) -> Fermi level difference -> charge transfer under self-adjoint coupling",
+  "continuous": true,
+  "verdict": "mechanism works: transfer is continuous (varies with Vdef, tp), filling the discrete->continuous gap that defeated the 18-round falsification",
+  "boundary": "transfer magnitude is small (0.03-0.06) because a single-point defect gives small EF difference; need continuously tunable spectral asymmetry to reach cuprate doping scale"
+}

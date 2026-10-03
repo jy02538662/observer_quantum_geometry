@@ -1,0 +1,44 @@
+{
+  "results": {
+    "0.0": {
+      "N_e": 128,
+      "mu": 0.0,
+      "T_BKT": 0.0
+    },
+    "0.02": {
+      "N_e": 123,
+      "mu": -0.7654,
+      "T_BKT": 0.02392
+    },
+    "0.05": {
+      "N_e": 115,
+      "mu": -1.0824,
+      "T_BKT": 0.03382
+    },
+    "0.1": {
+      "N_e": 102,
+      "mu": -1.608,
+      "T_BKT": 0.05025
+    },
+    "0.15": {
+      "N_e": 90,
+      "mu": -1.608,
+      "T_BKT": 0.05025
+    },
+    "0.2": {
+      "N_e": 77,
+      "mu": -2.0,
+      "T_BKT": 0.0625
+    },
+    "0.3": {
+      "N_e": 51,
+      "mu": -2.0,
+      "T_BKT": 0.0625
+    }
+  },
+  "question": "establish exact correspondence impurity concentration -> carrier density -> mu (real calibration)?",
+  "model_internal": "clean: fixed particle number N_e = N/2 - pN, mu(p) from DOS integral",
+  "real_calibration": "fails: p=0.10 gives mu=1.6t; to match Hg mu=0.37eV need t=0.23eV but then bandwidth 0.65eV << cuprate ~2eV",
+  "root": "pi-flux is Dirac semimetal (gapless, DOS∝E); cuprate is strongly-correlated Mott insulator (gapped, DOS renormalized). mu(p) scaling fundamentally different",
+  "verdict": "mechanism-level mu-wall solution is solid; but exact match to real cuprate is blocked by DOS renormalization (strong correlation = matter-side wall, V_eff/renormalization not derivable)"
+}

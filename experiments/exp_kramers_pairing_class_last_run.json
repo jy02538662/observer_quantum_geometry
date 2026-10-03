@@ -1,0 +1,31 @@
+{
+  "question": "does the intrinsic Kramers T'=JK (T'^2=-1) survive inter-sublattice pairing, making the BdG class DIII instead of D?",
+  "criterion": "T' survives iff J anti-commutes with Delta (J Delta J^-1 = -Delta, since Delta*=-Delta)",
+  "results": {
+    "L4": {
+      "self_dual": true,
+      "J_ok": true,
+      "Delta_antisym": true,
+      "J_anti_commutes_Delta": false,
+      "J_commutes_Delta": false,
+      "az_class": "?（既非纯对易也非纯反对易）"
+    },
+    "L6": {
+      "self_dual": true,
+      "J_ok": true,
+      "Delta_antisym": true,
+      "J_anti_commutes_Delta": false,
+      "J_commutes_Delta": false,
+      "az_class": "?（既非纯对易也非纯反对易）"
+    },
+    "L8": {
+      "self_dual": true,
+      "J_ok": true,
+      "Delta_antisym": true,
+      "J_anti_commutes_Delta": false,
+      "J_commutes_Delta": false,
+      "az_class": "?（既非纯对易也非纯反对易）"
+    }
+  },
+  "conclusion": "if J anti-commutes with Delta, BdG is DIII (Kramers-pair Majorana at vortex); if J commutes, pairing breaks T' and BdG is D (single Majorana, standard spinless p+ip)"
+}

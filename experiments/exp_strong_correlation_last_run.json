@@ -1,0 +1,16 @@
+{
+  "results": {
+    "vacancy0": 0.028,
+    "vacancy3": 0.056,
+    "vacancy6": 0.083,
+    "Z1.0": 0.25,
+    "Z0.6": 0.25,
+    "Z0.2": 0.25,
+    "J_diag_frac": 0.0
+  },
+  "question": "can strong-correlation DOS renormalization be derived from framework's defect/self-reference/emergent pseudospin?",
+  "defect_proxies": "all three (impurity/flux/vacancy) INCREASE low-E DOS (bound states), opposite to renormalization (suppression)",
+  "uniform_Z": "mu/bandwidth invariant (only rescales units, NOT renormalization)",
+  "emergent_pseudospin": "J diagonal fraction = 0 (momentum-space nonlocal), NOT same-site local spin needed for Hubbard U",
+  "verdict": "strong-correlation renormalization blocked at Bridge 2 (nonlocal vs local), a known wall, not solvable this round"
+}

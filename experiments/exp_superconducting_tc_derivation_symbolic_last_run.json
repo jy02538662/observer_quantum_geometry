@@ -1,0 +1,29 @@
+{
+  "chain": {
+    "k_F = μ/(ħv_F)": "mu/(hbar*vF)",
+    "n = g k_F²/(4π)": "g*mu**2/(4*pi*hbar**2*vF**2)",
+    "m* = ħk_F/v_F": "mu/vF**2",
+    "J_s = ħ²n/(4m*)": "g*mu/(16*pi)",
+    "T_BKT = (π/2)J_s": "g*mu/32"
+  },
+  "assert_chain": {
+    "J_s == g·μ/(16π)": "PASS",
+    "T_BKT == g·μ/32": "PASS"
+  },
+  "g_factor": {
+    "g=1（谷奇 p+ip 无自旋，锁定自旋-谷）→ T_BKT = μ/32": "mu/32",
+    "g=2（自旋简并 s 波）→ T_BKT = μ/16": "mu/16",
+    "笔记用 μ/32 ⟺ g=1，必须显式写「谷奇锁定」这一步": true
+  },
+  "candidates": {
+    "A: μ=Λ/λ_c → T_BKT": "Lambda/(32*lambda_c)",
+    "B: μ=Λ·λ_min → T_BKT": "Lambda*lambda_min/32",
+    "C: μ=Λ(λ_c−λ_min) → T_BKT": "Lambda*(lambda_c - lambda_min)/32"
+  },
+  "mu2_pitfall": {
+    "填充(粒子数) n ∝ μ²（Dirac 2D）": true,
+    "若一元论对应是「填充=1/λ_c」⟹ μ² ∝ 1/λ_c ⟹ μ = Λ/√λ_c": "λ_c^{-1/2} 依赖",
+    "若一元论对应是「能量 μ=偏好=1/λ_c」⟹ μ = Λ/λ_c": "λ_c^{-1} 依赖",
+    "两个身份给不同函数形式（差根号），框架缺机制选定": true
+  }
+}

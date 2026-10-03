@@ -1,0 +1,26 @@
+{
+  "L": 8,
+  "results": {
+    "原胞内（s 波谷对称）": {
+      "anti": false,
+      "comm": false,
+      "overlap_anti": -0.033,
+      "overlap_comm": 0.033,
+      "class": "混合"
+    },
+    "键 s 波": {
+      "anti": false,
+      "comm": false,
+      "overlap_anti": -0.086,
+      "overlap_comm": 0.086,
+      "class": "混合"
+    },
+    "键 p+ip（动量奇）": {
+      "anti": false,
+      "comm": false,
+      "overlap_anti": -0.083,
+      "overlap_comm": 0.083,
+      "class": "混合"
+    }
+  }
+}

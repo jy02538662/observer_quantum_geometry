@@ -1,0 +1,7 @@
+{
+  "question": "does the intrinsic Kramers T' survive the inter-sublattice s-wave pairing, making BdG DIII?",
+  "key_physics": "intra-cell inter-sublattice i sigma_y pairing is momentum-independent (s-wave) => valley-symmetric => preserved by T' => DIII",
+  "symbol_support": "4x4 classification: sigma_y ⊗ I (valley-symmetric) anti-commutes with J (DIII); sigma_y ⊗ tau_x (valley-odd) commutes (D)",
+  "caveat": "full gap needs p-wave (momentum-odd, valley-odd) which breaks T' => D. Real dichotomy: s-wave valley-symmetric DIII vs p-wave full-gap D.",
+  "conclusion": "intrinsic Kramers T' opens a DIII channel (Kramers-pair Majorana) that standard spinless (T^2=+1) cannot reach; but whether the framework's pairing lands in DIII (s-wave, has nodes) or D (p-wave, full gap) is an open dichotomy"
+}

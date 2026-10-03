@@ -1,0 +1,19 @@
+{
+  "results": {
+    "half_bandwidth_t": 2.8284,
+    "full_bandwidth_t": 5.6569,
+    "staggered_gap_t": {
+      "0.2": 0.4,
+      "0.5": 1.0,
+      "1.0": 2.0
+    },
+    "wannier_localization_fluct_t": 2.0,
+    "dirac_energy_t": 0.0,
+    "bridge_fee_t": 2.0,
+    "bridge_fee_over_bandwidth": 0.3536
+  },
+  "question": "can the 'opposition -> unification' bridge fee be turned into a computable U scale?",
+  "answer": "bridge fee = Wannier localization energy cost = single-site state fluctuation = sqrt(degree)*t = 2t ~ 0.35 full bandwidth",
+  "verdict": "U scale ~ bandwidth (order-of-magnitude matches cuprate U/t ~ 5-20), but the exact O(1) prefactor is Bridge 2's q-deformation limit, NOT derivable here",
+  "boundary": "this gives the SCALE (order of magnitude) of U, not the precise value; the precise value needs Bridge 2 (momentum SU(2) -> real-space S^2)"
+}

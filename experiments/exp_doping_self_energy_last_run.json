@@ -1,0 +1,58 @@
+{
+  "results": {
+    "A_tp0.2": {
+      "ratio_low_DOS": 0.993
+    },
+    "A_tp0.6": {
+      "ratio_low_DOS": 0.89
+    },
+    "A_tp1.2": {
+      "ratio_low_DOS": 3.788
+    },
+    "B_Vdef1.0": {
+      "ratio_low_DOS": 0.902
+    },
+    "B_Vdef2.0": {
+      "ratio_low_DOS": 0.902
+    },
+    "B_Vdef4.0": {
+      "ratio_low_DOS": 0.891
+    },
+    "C_w-0.8": {
+      "Re_trSigma": 26.832,
+      "Im_trSigma": -8.581
+    },
+    "C_w-0.4": {
+      "Re_trSigma": 4.51,
+      "Im_trSigma": -0.971
+    },
+    "C_w-0.1": {
+      "Re_trSigma": -10.181,
+      "Im_trSigma": -3.947
+    },
+    "C_w0.0": {
+      "Re_trSigma": -4.881,
+      "Im_trSigma": -39.382
+    },
+    "C_w0.1": {
+      "Re_trSigma": 13.869,
+      "Im_trSigma": -7.042
+    },
+    "C_w0.4": {
+      "Re_trSigma": -3.612,
+      "Im_trSigma": -0.969
+    },
+    "C_w0.8": {
+      "Re_trSigma": -21.534,
+      "Im_trSigma": -2.753
+    },
+    "D_boundary": {
+      "rank": 12,
+      "nonzero_frac": 0.0069
+    },
+    "crosscheck_maxerr": 0.0
+  },
+  "question": "does the D-D self-adjoint coupling t_p give a frequency-dependent self-energy that renormalizes the DOS (strong correlation)?",
+  "method": "exact Feshbach/Schur self-energy Sigma(omega)=V G2(omega) V+, effective DOS; cross-checked vs full diagonalization",
+  "verdict": "TO BE FILLED AFTER RUN"
+}

@@ -1,0 +1,16 @@
+{
+  "question": "symbolically verify the pi-flux Bloch Hamiltonian is a 2D Dirac fermion",
+  "H_form": "H(k) = -2t(cos kx sx + cos ky sy)",
+  "dirac_spectrum_ok": true,
+  "chiral_symmetry_ok": true,
+  "dirac_points_ok": true,
+  "linear_dispersion_ok": true,
+  "dirac_points": [
+    "(pi/2,pi/2)",
+    "(-pi/2,pi/2)",
+    "(pi/2,-pi/2)",
+    "(-pi/2,-pi/2)"
+  ],
+  "velocity": "2t",
+  "conclusion": "pi-flux is a 2D Dirac fermion; Dirac points protected by chiral symmetry Gamma=sigma_z"
+}

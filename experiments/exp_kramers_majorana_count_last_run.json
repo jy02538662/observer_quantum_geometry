@@ -1,0 +1,31 @@
+{
+  "question": "does the intrinsic Kramers T' change the vortex-core Majorana count from 1 (D) to a Kramers pair 2 (DIII)?",
+  "L": 21,
+  "intra_valley_D": {
+    "n_zero_modes": 0,
+    "lowest_8_absE": [
+      0.13941,
+      0.14848,
+      0.15551,
+      0.16486,
+      0.17386,
+      0.17412,
+      0.17872,
+      0.18001
+    ]
+  },
+  "inter_valley_DIII": {
+    "n_zero_modes": 0,
+    "lowest_8_absE": [
+      0.00341,
+      0.00762,
+      0.00846,
+      0.02588,
+      0.0298,
+      0.03337,
+      0.03627,
+      0.03804
+    ]
+  },
+  "conclusion": "if inter-valley (T'-preserving) pairing gives a Kramers pair (2 Majorana) while intra-valley gives 1, then intrinsic Kramers gives a testable unique prediction"
+}

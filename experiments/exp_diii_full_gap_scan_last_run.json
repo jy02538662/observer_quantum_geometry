@@ -1,0 +1,8 @@
+{
+  "question": "locate the nodes of the s-wave inter-sublattice pairing (DIII valley-symmetric)",
+  "min_gap": 0.0026202256702895503,
+  "min_gap_location": [
+    1.3195,
+    -1.5708
+  ]
+}

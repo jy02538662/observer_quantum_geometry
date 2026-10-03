@@ -1,0 +1,15 @@
+{
+  "J_ok": true,
+  "tau_x": {
+    "hermitian": true,
+    "square_I": true,
+    "comm_D": true,
+    "anti_J": true
+  },
+  "tau_z": {
+    "hermitian": true,
+    "square_I": true,
+    "comm_D": true,
+    "anti_J": true
+  }
+}

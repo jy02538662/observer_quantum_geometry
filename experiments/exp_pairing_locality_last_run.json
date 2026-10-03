@@ -1,0 +1,16 @@
+{
+  "results": {
+    "onsite_pairing_max": 0.0,
+    "rho_r1": 0.2394,
+    "rho_r4": 0.0035,
+    "rho_r8": 0.0035,
+    "rho_log_slope": -1.624,
+    "pairing_r1": 0.1892,
+    "pairing_r2": 0.2465,
+    "pairing_r4": 0.2465
+  },
+  "question": "does spinless pi-flux have on-site pairing (= Hubbard U double occupation)?",
+  "answer": "NO — on-site pairing is strictly 0 (Pauli: c_i c_i = 0 for spinless fermions); pairing is algebraically non-local (Dirac semimetal, rho ~ 1/r)",
+  "verdict": "the bridge fee is NOT an energy cost 2t, it is PAULI FORBIDDEN — spinless has no on-site double-occupation at all; Bridge 2 = missing spin degree of freedom, not missing energy",
+  "boundary": "this sharpens Bridge 2: it is a structural missing degree of freedom (spin), not a computable energy gap"
+}

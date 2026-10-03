@@ -1,0 +1,20 @@
+{
+  "question": "does intrinsic Kramers T' survive intra-cell inter-sublattice pairing (momentum-independent i sigma_y) in the BdG?",
+  "results": {
+    "L4": {
+      "rel_diff": 0.3429971702854709,
+      "T_prime_survives": false,
+      "az_class": "D"
+    },
+    "L6": {
+      "rel_diff": 0.3208457509697996,
+      "T_prime_survives": false,
+      "az_class": "D"
+    },
+    "L8": {
+      "rel_diff": 0.34853697302933634,
+      "T_prime_survives": false,
+      "az_class": "D"
+    }
+  }
+}

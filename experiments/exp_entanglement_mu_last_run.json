@@ -1,0 +1,45 @@
+{
+  "results": {
+    "-2.0": {
+      "S": 5.374,
+      "interior": 9
+    },
+    "-1.0": {
+      "S": 4.631,
+      "interior": 10
+    },
+    "-0.5": {
+      "S": 4.631,
+      "interior": 10
+    },
+    "-0.2": {
+      "S": 4.631,
+      "interior": 10
+    },
+    "0.0": {
+      "S": 4.633,
+      "interior": 12
+    },
+    "0.2": {
+      "S": 4.631,
+      "interior": 10
+    },
+    "0.5": {
+      "S": 4.631,
+      "interior": 10
+    },
+    "1.0": {
+      "S": 4.631,
+      "interior": 10
+    },
+    "2.0": {
+      "S": 5.546,
+      "interior": 9
+    }
+  },
+  "question": "does the pi-flux entanglement spectrum provide a tunable chemical potential (breaking the mu-wall)?",
+  "continuous_spectrum": true,
+  "mu_sensitivity": "entanglement entropy S ~ 4.63 invariant under doping mu scan",
+  "verdict": "entanglement spectrum is continuous (from gapless Dirac points) but NOT tunable by mu; it does not provide a chemical potential; strong version of the wall-breaking guess is refuted",
+  "root": "D's spectrum gives 'bands' not 'filling'; entanglement spectrum is just another reading of 'bands', still no 'filling'"
+}
