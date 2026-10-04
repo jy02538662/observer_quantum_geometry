@@ -1,0 +1,33 @@
+{
+  "step1_pure_state": {
+    "纯态 ψ（归一化）": [
+      "0.107+0.330j",
+      "-0.365-0.684j",
+      "0.263-0.457j"
+    ],
+    "site 密度 n_i = |ψ_i|²": [
+      "0.120",
+      "0.602",
+      "0.278"
+    ]
+  },
+  "step2_factorization": {
+    "ρ_ij ρ_jk（link-link，共享端点 j）": "-0.0738+0.0817j",
+    "n_j ρ_ik（site 密度 × 次近邻 link）": "-0.0738+0.0817j",
+    "因子化 ρ_ij ρ_jk = n_j ρ_ik（纯态恒等式）": true,
+    "说明": "site 密度 n_j 从「link-link 乘积」中涌现（作为因子）——site 不是基本的，是 link 乘积的涌现因子"
+  },
+  "step3_compare": {
+    "site-U（Hubbard）": "U n_j² = U n_j（泡利）",
+    "link-link（方向3 给）": "n_j ρ_ik（site 密度 × 次近邻 link 相干）",
+    "是否等价": "否——link-link 是「site × link」，site-U 是「site × site」（对角 vs 含非对角）",
+    "卡点1": "link-link ≠ site-U（给出不同的物理，RKKY/超交换 vs Hubbard）"
+  },
+  "honest_conclusion": {
+    "方向3 的正面收获": "site 密度 n_j 从 link-link 乘积涌现（ρ_ij ρ_jk = n_j ρ_ik，纯态恒等式）——「关系先于实体」的代数落地",
+    "方向3 的卡点1": "link-link 给 n_j ρ_ik（site×link），不是 n_j²（site-U = Hubbard）——两者不等价，给出不同物理",
+    "方向3 的卡点2": "「共享端点」的代数定义 = 两个 link 乘积非零（T_μ^† T_ν 非零），已明确为「路径 i→j→k」",
+    "方向3 的卡点3": "link-link 的跑动仍需动力学（β函数）——换语言不破墙",
+    "净评估": "方向3 打开了「结构」（site 从 link 涌现），但 link-link ≠ site-U（卡点1），且跑动仍需动力学（卡点3）"
+  }
+}
