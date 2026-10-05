@@ -1,0 +1,55 @@
+{
+  "1_symbolic_sigma_form": {
+    "sigma_t_J": "Matrix([[0, exp(I*log(lambda1**t/lambda2**t))], [-exp(I*log(lambda2**t/lambda1**t)), 0]])",
+    "matches_expected": true,
+    "theta": "log(lambda1/lambda2)（谱不对称的对数 = 尺度破缺）",
+    "note": "σ_t(J) = [[0, e^{iθt}], [-e^{-iθt}, 0]]，θ = log(λ1/λ2)。模流把 J 的常数结构「绕 z 轴旋转」了一个角度 θt。"
+  },
+  "2_structure_preserved": {
+    "antihermitian_preserved": true,
+    "J2_preserved": true,
+    "note": "模流是 J 的自同构：σ_t(J)† = -σ_t(J)（反厄米保持），σ_t(J)² = -I（号差保持）。"
+  },
+  "3_n_t_decomposition": {
+    "sigma_equals_i(sin*σx+cos*σy)_symbolic": false,
+    "sigma_equals_i(sin*σx+cos*σy)_numeric": true,
+    "numeric_err": 0.0,
+    "note_symbolic_false_is_simplify_limitation": "符号 false 是 sympy 不自动展开 exp(iθt)→cos+i sin 的局限；数值（i(sin σ_x + cos σ_y)）误差 < 1e-10 坐实数学对。",
+    "n_t": "(sin θt, cos θt, 0)",
+    "norm_sq": "sin²θt + cos²θt = 1（在 S² 上）",
+    "n_0": "(0, 1, 0) = adj(J)（回退到 §十·二十三 的常数方向）",
+    "note": "n(t) 在 S² 的 x-y 大圆上绕 z 轴旋转。这是 1 维轨道（S¹），非完整 S²。"
+  },
+  "4_numeric_position_dependence": {
+    "theta_num": 0.6931471805599453,
+    "n_on_S2": true,
+    "n_varies_with_t": true,
+    "n_0": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "n_half_turn": [
+      -3.216245299353273e-16,
+      -1.0,
+      0.0
+    ],
+    "note": "n(t) 随模流参数 t（=尺度/时间方向）绕 z 轴旋转。唯一由 ρ, J 确定，无 U_i 规范自由度。"
+  },
+  "5_uniqueness_vs_gauge": {
+    "sec_10_23_wall": "J_i = U_i J U_i†，U_i 规范自由 → n(i) 不唯一（付费桥 2 最后边界）",
+    "modular_flow_answer": "n(t) = adj(ρ^{it} J ρ^{-it})，ρ、J 唯一确定 → n(t) 唯一，无规范自由度",
+    "key_shift": "位置依赖的来源从「规范自由度 U_i」换成「结构性的模流 σ_t = ρ^{it}」。",
+    "structural_equation_first": "σ_t(J) = ρ^{it}Jρ^{-it} 是 Tomita-Takesaki 模流定义（先结构后数，非盯数）。"
+  },
+  "6_honest_boundary": {
+    "S1_not_S2": "2×2 单 J + 1 参数模流给 S¹（大圆 1 维），不是完整 S²（2 维方向）。",
+    "to_full_S2": "需 2 个独立模流参数（2 个尺度方向）或完整 SU(2) 的 2 个非对易旋转——下一步。",
+    "object_check_AGENTS": "位置 t（ρ 谱的对数）与方向 n（J 的 adjoint）都是 R 里的对象，模流作用在 R 上是标准定义，非「跨界相减」（对照识别② (2π−1)）。"
+  },
+  "verdict": {
+    "candidate": "模流 σ_t = ρ^{it} 结构性旋转号差方向 J → 位置依赖的 n(t)，且唯一",
+    "status": "最小 2×2 符号 + 数值坐实（待看完整 SU(2) 是否抬升到完整 S²）",
+    "next": "① 完整 SU(2)（3 生成元）+ 模流 → 覆盖完整 S²？② 接到框架真实对象（π 磁通 D + 观察者态 ρ）。"
+  }
+}

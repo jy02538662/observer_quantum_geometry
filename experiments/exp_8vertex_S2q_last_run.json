@@ -1,0 +1,108 @@
+{
+  "1_vertices": {
+    "num_vertices": 8,
+    "all_on_unit_sphere": true,
+    "vertices_are_Z2x3_orbit": true,
+    "example_vertices": [
+      [
+        0.5774,
+        0.5774,
+        0.5774
+      ],
+      [
+        0.5774,
+        0.5774,
+        -0.5774
+      ],
+      [
+        0.5774,
+        -0.5774,
+        0.5774
+      ],
+      [
+        0.5774,
+        -0.5774,
+        -0.5774
+      ],
+      [
+        -0.5774,
+        0.5774,
+        0.5774
+      ],
+      [
+        -0.5774,
+        0.5774,
+        -0.5774
+      ],
+      [
+        -0.5774,
+        -0.5774,
+        0.5774
+      ],
+      [
+        -0.5774,
+        -0.5774,
+        -0.5774
+      ]
+    ]
+  },
+  "2_commutative": {
+    "order_of_Z2x3": 8,
+    "is_abelian": true,
+    "every_element_involution": true,
+    "group_algebra_commutative": true,
+    "n_irreps_1dim": 8,
+    "conclusion": "C[Z_2³] ≅ ℂ⁸ 是交换代数（经典有限空间）"
+  },
+  "3_quantum_sphere": {
+    "defining_relation": "A B = q^2 B A",
+    "commutator_AB": "(q**2 - 1)*B*A",
+    "commutator_vanishes_when": [
+      "-1",
+      "1"
+    ],
+    "noncommutative_for_q_not_1": true,
+    "conclusion": "S²_q 在 q≠±1 时 [A,B]=(q²−1)BA ≠ 0，非交换"
+  },
+  "4_fuzzy_sphere": {
+    "fuzzy_sphere_dims(j)": [
+      [
+        0.5,
+        4
+      ],
+      [
+        1.0,
+        9
+      ],
+      [
+        1.5,
+        16
+      ],
+      [
+        2.0,
+        25
+      ],
+      [
+        2.5,
+        36
+      ]
+    ],
+    "dims_are_4_9_16_25_36": true,
+    "never_equals_8": true,
+    "conclusion": "模糊球面维数 (2j+1)² ∈ {4,9,16,...}，≠ 8"
+  },
+  "5_plaquette_8_vs_4": {
+    "all_sign_combos": 8,
+    "closed_plaquette_constraint": 4,
+    "open_star_no_constraint": 8,
+    "note": "闭合 plaquette → 4 顶点；顶点 star → 8 顶点。两者都是交换经典集合，不影响核心判据。"
+  },
+  "verdict": {
+    "what_is_8vertex": "Z_2³ 轨道 = 立方体顶点 = 交换代数 C[Z_2³] ≅ ℂ⁸（经典有限空间）",
+    "what_is_S2q": "Podleś 量子球面 = 非交换代数（q≠1 时 [A,B]=(q²−1)BA ≠ 0）",
+    "verdict": "8 顶点 ≠ S²_q（q≠1）：对象不同（交换 vs 非交换）。8 顶点是「经典（交换）有限截断」= q→1 极限，不是「量子（非交换）球面」。",
+    "also_not_fuzzy": "模糊球面维数 (2j+1)² ∈ {4,9,16,...} ≠ 8，也不是模糊球面。",
+    "grading": "【否证】「8 顶点 = S²_q」不成立（对象错误，交换 vs 非交换，AGENTS 三问①）；但 8 顶点本身作为「经典有限截断」是正确、可保留的结构。",
+    "open": "8 顶点能否被赋予非交换结构（如立方体的量子对称群 Banica/Bichon）是另一回事，且 π 磁通的 Z_2 相位是阿贝尔的，不会自然诱导非交换性。"
+  }
+}

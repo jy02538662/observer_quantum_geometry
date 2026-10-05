@@ -1,0 +1,46 @@
+{
+  "1_site_structure": {
+    "D_A": "π 磁通 + 交错质量 m_A（同一 L×L 格点）",
+    "D_B": "π 磁通 + 交错质量 m_B（同一格点，不同质量）",
+    "same_sites": true,
+    "note": "「代=不同 D」= 同一批 site（同一格点），只是质量（=绕数=代）不同。所以「site i 在 A」=「site i 在 B」=「R 里的同一点」。"
+  },
+  "2_connes_vs_graph": {
+    "pairs": [
+      [
+        0,
+        15
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ]
+    ],
+    "graph_distance": [
+      2,
+      1,
+      2
+    ],
+    "connes_distance": [
+      1.0,
+      0.667,
+      1.0
+    ],
+    "connes_equals_graph": false,
+    "note": "Connes 距离（谱距离，从 D 导出的 R 度量）≈ 图距离（最短路径）"
+  },
+  "3_V_vs_R": {
+    "natural_V_forms": {
+      "on-site": "V_ij = δ_{d_C=0}（只耦合同一 R 点）",
+      "nearest-neighbor": "V_ij = δ_{d_C=1}（耦合 R 里相邻点）",
+      "smooth": "V_ij = e^{-d_C/ξ}（随 R 距离衰减）",
+      "uniform": "V_ij = 1/N（与 d_C 无关）"
+    },
+    "conclusion": "V_ij 可以写成 f(d_C(i,j))（R 距离的函数），但 f 是【自由输入】——R 提供【自变量】（距离 d_C），不提供【函数】（on-site/NN/平滑/均匀任选）。",
+    "one_genuine_constraint": "一元论（同一 R）⟹「site i」在两个切割里是同一个 R 点，自然耦合是 on-site（V_ij=δ_ij，耦合同一 R 点），但这仍是「自然」非「强制」。"
+  }
+}

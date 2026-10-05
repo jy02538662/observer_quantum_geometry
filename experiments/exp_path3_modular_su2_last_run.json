@@ -1,0 +1,31 @@
+{
+  "1_modular_flow_on_SU2": {
+    "sigma_t(sigma_z)_unchanged": true,
+    "sigma_t(sigma_x)_numeric_rotates_in_xy": true,
+    "sigma_t(sigma_x)_numeric_err": 0.0,
+    "note_symbolic_false_is_simplify_limitation": "符号 false 是 sympy 不自动展开 exp→trig 的局限；数值（cos θt σ_x − sin θt σ_y）误差 < 1e-10 坐实数学对。",
+    "interpretation": "模流 ρ^{it} 在 SU(2) adjoint 上 = 绕 σ_z 轴的 SO(2) 旋转（1 参数），σ_z 不动、σ_x/σ_y 在 x-y 平面旋转 → 只覆盖 S² 的 x-y 大圆（S¹）。"
+  },
+  "2_single_flow_covers_S1_only": {
+    "n_z_range": [
+      0.0,
+      0.0
+    ],
+    "n_z_constant_zero": true,
+    "covers_full_S2": false,
+    "note": "单个模流的轨道 n_z ≡ 0（恒在 x-y 大圆上），只覆盖 S¹（1 维），不覆盖完整 S²（需 n_z 覆盖 [-1,1]）。"
+  },
+  "3_two_flows_cover_S2": {
+    "n_z_range_two_param": [
+      -1.0,
+      1.0
+    ],
+    "covers_full_S2": true,
+    "note": "2 个非对易模流参数（2 个尺度方向）→ n_z 覆盖 [-1,1]，完整 S²。单个观察者态 ρ（公理 3 唯一）只给 1 参数 → S¹；完整 S² 需 2 个非对易尺度方向。"
+  },
+  "verdict": {
+    "core_result": "模流结构性旋转号差方向（S¹ 大圆），唯一、位置依赖、结构等式在前——修正 §十·二十三「唯一性核查」漏掉的结构性来源。",
+    "dimension": "1 观察者态（1 参数模流）→ S¹；完整 S² 方向由断裂→SU(2) 本身给（2 维，内部全局），模流只「旋转」它（时间方向）。与 exp_why_3p1d「1 观察者态 + 2 断裂 S²」一致。",
+    "open": "① 付费桥 2 要的「实空间局域 S² 场」=「位置（空间）× 方向（S²）」，位置从哪来（径向 ρ 谱？）与「模流时间方向」的关系待厘清；② 2 个非对易尺度方向在框架里的来源（观察者侧只有 1 个 s 对偶）。"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "D1_Dlevel_fixed_norm": {
+    "diag_mean": 0.010129061153663327,
+    "offdiag_mean": 0.012454011096973338,
+    "diag_fraction_of_total": 0.01274525778397422,
+    "interpretation": "对角占比小 → V 离域（铺开）；占比大 → 局域",
+    "note": "D 层面固定 ‖V‖=1 的 min Tr(D_comb^4)（⚠️ 层面混淆，仅作对照）"
+  },
+  "D2_rholevel_fixed_tp": {
+    "t_p": 0.5,
+    "S_by_V_form": {
+      "on-site": 0.0,
+      "off-diag": 0.05707953,
+      "uniform": 0.05538335
+    },
+    "min_V_form": "on-site",
+    "note": "固定 t_p 下，min S 偏好「离参考态最近」的 V 形式（仍是 min 原则，只是不 min t_p）"
+  },
+  "A_symmetry": {
+    "conclusion": "对称性/守恒律【约束】V（V 必须保持对称/守恒），但 V=0 恒满足 ⟹ 不【迫使】V≠0",
+    "detail": "V=c_A†c_B+c_B†c_A 已守恒总粒子数 N_A+N_B；但它允许 V=0。对称性/守恒律是「允许条件」非「强制条件」。"
+  },
+  "B_topology": {
+    "conclusion": "拓扑荷差（绕数差）说 D_A≠D_B，但【不迫使】特定 V≠0。耦合仍是输入。",
+    "detail": "「绕数=代」是识别（不同代=不同绕数=不同质量），但代间耦合 V 是输入（t_p 手放），拓扑不决定 V 的形式或非零性。"
+  },
+  "E_defect": {
+    "conclusion": "缺陷（D_B 有局域态）不迫使 V≠0。缺陷在 D_B 内部，不影响 A↔B 耦合。"
+  },
+  "F_dynamics": {
+    "conclusion": "框架无非平衡动力学（只有静态变分 Tr(D^4)）。「动力学生成 V≠0」无现成原则。"
+  }
+}

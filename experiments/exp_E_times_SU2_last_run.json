@@ -1,0 +1,34 @@
+{
+  "1_position_from_E": {
+    "lattice": "T³（L=16，N=4096 单元）",
+    "note": "位置 = E 的分辨率单元，不是预设实空间。3D 位置 ⟹ Hopf 荷 π₃ 有定义。"
+  },
+  "2_S2_field": {
+    "n_on_S2": true,
+    "nx_range": [
+      -1.0,
+      1.0
+    ],
+    "ny_range": [
+      -1.0,
+      1.0
+    ],
+    "nz_range": [
+      -1.0,
+      1.0
+    ],
+    "position_dependent": true,
+    "note": "n(i) ∈ S²（|n|=1），位置依赖（三分量都随 i 变）。"
+  },
+  "3_hopf_charge": {
+    "note": "n(i) 是位置基的 S² 场（|n|=1，位置依赖）。Hopf 荷 π₃(S²) 需要「S¹ 纤维绕 S² 基」的完整链接，即 n(i) 的第三个角（S¹ 纤维方向）= 复相位的「内部」相位。本轮先坐实「S² 场存在 + 位置依赖」，Hopf 荷的完整计算需补上 S¹ 纤维（下一步）。"
+  },
+  "verdict": {
+    "S2_field_exists": true,
+    "position_dependent": true,
+    "position_from_E": true,
+    "mechanism": "复相位（U(1) 位置依赖）+ 内部 SU(2)（断裂→二元）→ Hopf 纤维化 → S² 方向 n(i)",
+    "wall_status": "「实空间局域」墙被绕过——位置是 E 切出的离散单元，不是预设实空间；S² 场 n(i) 直接在 E 单元上，不经过 Wannier 局域化",
+    "next_step": "补上 S¹ 纤维（复相位的内部相位），算完整 Hopf 荷 π₃(S²)"
+  }
+}

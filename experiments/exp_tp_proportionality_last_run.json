@@ -1,0 +1,68 @@
+{
+  "0_anchor": {
+    "lambda_mod": 5.3218,
+    "lambda_min": 0.000602,
+    "m2_minus_m1": 203.75,
+    "target_theta12": 0.2265,
+    "target_tp": 46.15,
+    "note": "锚点：θ_12 = t_p/(m_2-m_1)，m_2-m_1 = e^λ-1 ≈ 204，θ_12=0.2265 ⟹ t_p ≈ 47。"
+  },
+  "1_candidate2_3_observer_state": {
+    "lambda_mod_is_N_function": "λ_mod = log(N²/π²) − log(ln(2N²/π²))，只依赖 N",
+    "lambda_min_is_N_function": "λ_min = π²/N²，只依赖 N",
+    "does_N_vary_with_generation": "框架里 N=128 是观察者层级（区分模式数），固定，不随代 n∈{1,2,3} 变",
+    "candidate2_lambda_mod_diff": "|λ_mod(A)−λ_mod(B)| = 0（N 固定 ⟹ λ_mod 相同）",
+    "candidate3_lambda_min_diff": "|λ_min(A)−λ_min(B)| = 0（N 固定 ⟹ λ_min 相同）",
+    "verdict": "候选2、3 基于观察者态尺度谱，而观察者态 ρ=C/λ 不随代变 ⟹ 恒 0。「代」改变的是 D 的能量谱（交错质量 m_n=e^{λn}），不是观察者态尺度谱。",
+    "AGENTS_question1": "对象错位：候选2、3 用「观察者态尺度谱」（不随代变），t_p 应依赖「D 能量谱」（随代变）——两个不同对象。"
+  },
+  "2_D_spectrum": {
+    "L": 16,
+    "N_grid": 256,
+    "m1": 0.001,
+    "m2": 0.205,
+    "ratio": 204.99999999999997,
+    "bandwidth": 2.828,
+    "note": "代 = 不同交错质量 m（比值 205）。D 能量谱随 m 变（带宽内，Δm=0.204 有意义）。"
+  },
+  "3_candidate1_4_thermal": {
+    "beta": [
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "rel_entropy_S(rhoA||rhoB)": [
+      4e-06,
+      9.3e-05,
+      6e-06,
+      0.0
+    ],
+    "frobenius_norm": [
+      0.000174,
+      0.000451,
+      0.000726,
+      2e-06
+    ],
+    "target_tp": 47.0,
+    "note": "热态 ρ=e^{-βD}/Z。相对熵和 Frobenius 范数随 β 变，量级远小于 47（除非 β 很大）。"
+  },
+  "4_candidate5_cond_exp": {
+    "E_A_E_B": "费米海投影（填满负能级）= 条件期望 E 的候选",
+    "frobenius_norm_E_A_minus_E_B": 0.9933,
+    "target_tp": 47.0,
+    "note": "‖E_A−E_B‖_F（费米海投影差），量级 ~O(N_grid^{1/2}) 量级（投影秩差），不是 47。"
+  },
+  "5_control_energy_diff": {
+    "norm_diag(E_A)-diag(E_B)": 0.4568,
+    "target_tp": 47.0,
+    "note": "对照：D 能量谱差（真正随代变）。‖谱差‖ 的量级 = Δm × √N_grid 量级（质量差 × 态数），不是 47（除非巧合）。"
+  },
+  "verdict": {
+    "candidate2_3": "恒 0（观察者态尺度谱不随代变，对象错位）",
+    "candidate1_4_5": "随 β 或投影定义变，量级远小于 47（热态/投影是「谱态」不是「耦合强度」）",
+    "control_energy_diff": "量级 = Δm×√N_grid（质量差×态数），不是 47",
+    "core_finding": "「正比关系」候选要么对象错位（观察者态 vs D 谱态），要么量级与 47 无关。t_p ≈ 47 是「θ_12 × Δm」反解出的标定值，不是任何「差」的自然量级。",
+    "AGENTS_question3": "「t_p ∝ 差」需要先有结构等式（为什么 t_p 正比于这个差），不能只凭「差 ≈ 47」的数值巧合（盯数）。本脚本只算了「差」的量级，没有一个候选给出与 47 同量级的结构性匹配。"
+  }
+}

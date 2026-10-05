@@ -1,0 +1,26 @@
+{
+  "1_SU2_is_S3": {
+    "U_parametrization": "U = [[z1, -z2*], [z2, z1*]]",
+    "det_U": "z1*conjugate(z1) + z2*conjugate(z2)",
+    "det_equals_1_condition": "|z1|² + |z2|² = 1（即 S³）",
+    "note": "SU(2) 参数化 = S³（3 个实自由度），是 Hopf 总空间。这是框架断裂→二元→U(2)→SU(2) 的产物。"
+  },
+  "2_hopf_map": {
+    "n1,n2,n3": "(2*z1i*z2i + 2*z1r*z2r, 2*z1i*z2r - 2*z1r*z2i, z1i**2 + z1r**2 - z2i**2 - z2r**2)",
+    "norm_sq": "z1i**4 + 2*z1i**2*z1r**2 + 2*z1i**2*z2i**2 + 2*z1i**2*z2r**2 + z1r**4 + 2*z1r**2*z2i**2 + 2*z1r**2*z2r**2 + z2i**4 + 2*z2i**2*z2r**2 + z2r**4",
+    "on_S2": true,
+    "hopf_charge": "1（标准 Hopf 映射，已在 exp_hopf_nail.py 数值坐实 Q≠0）",
+    "note": "Hopf 映射 SU(2)→S² 是标准数学，Hopf 荷=1。U(1)（Cartan 子群 diag(e^{iθ},e^{-iθ})）是 S¹ 纤维。"
+  },
+  "3_internal_vs_real_space": {
+    "internal_SU2": "全局/内部对称（断裂→二元→U(2)→SU(2)），是 S³，含 Hopf 纤维化（Q=1）",
+    "real_space_local_S2": "每个实空间位置 x 一个 S² 方向 n(x)（付费桥 2 目标）",
+    "distinction": "内部 SU(2) 是【全局】对称，不是【实空间局域】场。Hopf 荷在内部 SU(2) 里（Q=1），但「内部 → 实空间局域」的映射（=付费桥 2）未建立。"
+  },
+  "verdict": {
+    "from_D_construction": "内部 Hopf 纤维化（U(1)→SU(2)→S²，Q=1）【已构造】——它是断裂→二元→SU(2) 的标准推论，不手放",
+    "wall_is_not_construction": "墙【不是】「从 D 构造 Hopf 纤维化」（这已做，标准+框架推导）",
+    "wall_is": "「内部 SU(2)（含 Hopf）→ 实空间局域 S² 场」的映射——这是付费桥 2 的本质",
+    "classification": "不是「新数学」（Hopf 是标准），不是「新构造」（内部 Hopf 已构造），是「新物理/结构性」（内部对称 → 实空间局域的机制没找到）"
+  }
+}

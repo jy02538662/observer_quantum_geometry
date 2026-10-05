@@ -1,0 +1,46 @@
+{
+  "A1_V0_baseline": {
+    "Tr_Dcomb4": 5764.0
+  },
+  "A2_grad_at_V0": {
+    "grad_norm": 0.0
+  },
+  "A3_hessian_curvatures": [
+    210576.809119,
+    210843.278197,
+    201238.708618,
+    197993.121539,
+    192410.512966,
+    205902.451164,
+    196659.680121,
+    207857.095244
+  ],
+  "A3_hessian_positive_definite": true,
+  "A4_gradient_descent": {
+    "initial_norm": 14.026756041897777,
+    "final_norm": 9.846698621921637e-122,
+    "converged_to_zero": true
+  },
+  "A5_comparison_fixed_norm": {
+    "onsite": 5833.0312,
+    "nearest_neighbor": 5826.7854,
+    "uniform": 5863.0,
+    "random": 5812.3425,
+    "V=0": 5764.0
+  },
+  "A5_min_is_V0": true,
+  "A_verdict": {
+    "conclusion": "V=0 是局部极小（Hessian 正定 + 梯度下降收敛到 0）。原则A（全局最优）给出 V=0（解耦）——外向交互应消失。"
+  },
+  "C_selfreflection": {
+    "constraint": "V = V†（V_ij = V_ji*）是唯一约束",
+    "determines_form": false,
+    "note": "自反性只给厄米性，不给 on-site/NN/平滑 的区分"
+  },
+  "B_minimal_coupling": {
+    "note": "「最小」= 最少非零元（on-site δ）或最小范数（V=0=原则A）。这是「自然选择」，不是「框架原则」。"
+  },
+  "D_observer_state": {
+    "note": "ρ_comb = ρ_A⊗ρ_B·e^{-t_p V} 的变分原理未建立。V 从 ρ 推是开放问题，无现成原则。"
+  }
+}

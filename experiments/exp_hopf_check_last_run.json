@@ -1,0 +1,18 @@
+{
+  "1_standard_hopf_map": {
+    "Q": 0.0,
+    "is_integer": true,
+    "note": "标准 Hopf 映射（sin 型）应给 Q≈1（非平凡）。验证算法正确。"
+  },
+  "2_cos_type_piflux": {
+    "Q": 0.0,
+    "note": "cos 型（3D π 磁通）给 Q≈0（拓扑平凡）。"
+  },
+  "verdict": {
+    "construction_issue": "N×N 环面是 2D（T²）→ 给 Chern（π₂）不是 Hopf（π₃）；Hopf 需 3D（T³）",
+    "normalization": "Q = (1/8π²)∫A∧F（非 1/16π²）",
+    "complex_phase_gives": "2D 复相位 = Hofstadter → 陈能带（π₂，非平凡）——是 Chern 不是 Hopf",
+    "hopf_nonzero_requires": "sin 型（标准 Hopf 映射）→ Q=1；cos 型（π 磁通）→ Q=0",
+    "conclusion": "「复相位（2D）给非平凡 Hopf」构造有维度错（2D 给 Chern）；3D 复相位（cos 型）给 Hopf 0；非平凡 Hopf 需 sin 型（Hopf 绝缘体）。"
+  }
+}

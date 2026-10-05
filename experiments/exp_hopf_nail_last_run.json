@@ -1,0 +1,25 @@
+{
+  "1_analytic_hopf_fibration": {
+    "connection": "α = (1/2)(dφ1 − cosψ dφ2)  [Hopf 纤维化联络]",
+    "Q": "-1/2（此归一化；标准 Hopf 不变量 = ±1，符号/归一化是约定）",
+    "nonzero": true,
+    "note": "Q ≠ 0：非平凡 Hopf 荷确实存在，来自 Hopf 纤维化联络（正确对象）"
+  },
+  "2_numerical_hopf_fibration": {
+    "Q": -0.49989,
+    "nonzero": true,
+    "expected_magnitude": 0.5,
+    "note": "Q ≈ −0.5（非零，与解析一致；标准归一化下 = ±1）"
+  },
+  "3_contrast_2band_berry": {
+    "2band_berry_gives": "Chern 数 π₂（上一轮用它，所以得 0）",
+    "hopf_fibration_gives": "Hopf 荷 π₃（正确对象，得 −0.5 ≠ 0）",
+    "note": "上一轮「Hopf 0」= 数学对象选错（用了 2 能带 Berry 联络 = Chern），不是「Hopf 不存在」"
+  },
+  "verdict": {
+    "hopf_charge_exists": true,
+    "requires": "Hopf 纤维化联络（正确数学对象），不是 2 能带 Berry 联络（monopole）",
+    "methodological": "框架可用任何数学语言写；上一轮「Hopf 0」是工具（2 能带 Berry 联络）选错，不是框架「不通」——用正确对象（Hopf 纤维化）得非平凡 Q ≠ 0",
+    "conclusion": "非平凡 Hopf 荷（Q=±1）确实存在，需要 Hopf 纤维化结构（sin 型 / 标准 Hopf 映射），不是「加复相位」自动给的，也不是框架「给不出」——是上一轮用错了数学对象。"
+  }
+}

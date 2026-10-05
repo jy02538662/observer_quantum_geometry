@@ -1,0 +1,31 @@
+{
+  "1_phase_wave": {
+    "unique_phases": [
+      0.0,
+      3.1416
+    ],
+    "is_Z2": true,
+    "note": "π 磁通 D 是实的 → arg(D_ij) ∈ {0,π}（Z₂），没有连续 S¹ 相位波"
+  },
+  "2_modular_flow": {
+    "phases_sample": [
+      -0.4852,
+      -0.769,
+      -0.9704,
+      -1.1266
+    ],
+    "is_continuous_S1": true,
+    "note": "模流 σ_t(D_ij)=D_ij·e^{it log(ρ_i/ρ_j)} 给连续相位（S¹），是真「回旋」"
+  },
+  "3_hopf_charge": {
+    "Q": -0.013469,
+    "is_nonzero": false,
+    "note": "3D π 磁通 d(k)=(cos kx,cos ky,cos kz) 的 Hopf 荷 ≈ 0（cos 偶函数 → 原像曲线在各自八分圆不 link → 拓扑平凡）。要非平凡 Hopf 需 sin 型（Hopf 绝缘体 Moore-Ran-Wen）。"
+  },
+  "verdict": {
+    "wave_phase": "Z₂（实 D，无连续 S¹ 波）",
+    "rotation": "S¹（模流连续相位，真回旋）",
+    "hopf_charge": "0（3D π 磁通 cos 型拓扑平凡）",
+    "conclusion": "「波（Z₂）+ 回旋（S¹）」不给非平凡 Hopf 荷：① D 的相位是 Z₂ 不是 S¹（实）；② 3D π 磁通的 Hopf 荷 = 0（cos 型，原像曲线不 link）。用户直觉「Hopf 在视野+回旋的交互」指向的结构对（S¹ 相位 + S² 方向 → Hopf），但框架的 π 磁通（实 → Z₂、cos 型 → Hopf 0）不实现它。"
+  }
+}

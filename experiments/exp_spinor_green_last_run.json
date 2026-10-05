@@ -1,0 +1,33 @@
+{
+  "1_Dk": {
+    "D(k)": "Matrix([[2*cos(ky), 2*cos(kx)], [2*cos(kx), -2*cos(ky)]])",
+    "note": "D(k) = 2cos(kx)σ_x + 2cos(ky)σ_z —— 只有 σ_x, σ_z 两个 Pauli"
+  },
+  "2_Gk_pauli_decomp": {
+    "g0": "E/(-E**2 + 4*cos(kx)**2 + 4*cos(ky)**2)",
+    "gx": "2*cos(kx)/(-E**2 + 4*cos(kx)**2 + 4*cos(ky)**2)",
+    "gy": "0",
+    "gz": "2*cos(ky)/(-E**2 + 4*cos(kx)**2 + 4*cos(ky)**2)",
+    "gy_is_zero": true,
+    "note": "gy = 0 ⟹ G 的方向 (gx,0,gz) 在 x-z 平面 = S¹，不是 S²"
+  },
+  "3_third_pauli": {
+    "sigma_y = i sx sz": "Matrix([[0, -I], [I, 0]])",
+    "equals_sigma_y": true,
+    "in_D": false,
+    "note": "σ_y = +i σ_x σ_z（或 -i，符号约定）是 SU(2) 生成元（反对易 T_xT_y=-T_yT_x 的产物），但【不在 D 里】（D 只用 σ_x, σ_z）→ G 也没有 σ_y。符号是约定，关键是 σ_y ∉ D。"
+  },
+  "4_numerical_spectrum": {
+    "num_eigenvalues": 256,
+    "num_unique_abs": 13,
+    "num_analytic_abs": 13,
+    "match": true,
+    "note": "谱 = ±2√(cos²kx+cos²ky)，2 重简并（磁 Bloch 2×2 块）"
+  },
+  "verdict": {
+    "S2_direction": false,
+    "actual_direction": "S¹（x-z 平面，gx,gz 非零、gy=0）",
+    "reason": "2D π 磁通 D 只用 2 个 Pauli（σ_x,σ_z），第三 Pauli σ_y=-iT_xT_y 是 SU(2) 生成元但不在 D ⟹ G 无 σ_y ⟹ 方向 S¹ 不是 S²。",
+    "to_get_S2": "需 3D π 磁通（T_x,T_y,T_z → Cl(3) → 3 个 Pauli），D(k)=2cos(kx)σ_x+2cos(ky)σ_y+2cos(kz)σ_z 才给 S²。"
+  }
+}

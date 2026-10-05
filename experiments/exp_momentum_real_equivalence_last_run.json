@@ -1,0 +1,27 @@
+{
+  "1_energy": {
+    "E_x = ∫|∂_x n|² dx": 0.88622,
+    "E_x via Plancherel = ∫|k|²|n(k)|² dk/2π": 0.886227,
+    "E_k = ∫|∂_k n|² dk": 5.16022,
+    "E_x_equals_E_k": false,
+    "note": "E_x = ∫|k|²|n(k)|²（Plancherel 一致），但 ≠ E_k = ∫|∂_k n|²——能量泛函在 Fourier 下不变的是「|k|² 加权范数」，不是「k 空间梯度」。"
+  },
+  "2_stability": {
+    "topological_charge": "π₃(S²)=ℤ 是同伦不变量——动量/实空间的 Hopfion 同为整数荷，拓扑稳定【相同】",
+    "energy_barrier": "能量势垒由能量泛函决定，E_x≠E_k → 势垒【不同】",
+    "verdict": "拓扑稳定性相同（同伦不变量），能量势垒不同（能量泛函不同）"
+  },
+  "3_coupling": {
+    "real_space_coupling": "n(x)·σ 逐点局域（δ 型，Hund 耦合）",
+    "momentum_space_coupling": "n(k)·σ 在实空间 = 卷积（非局域弥散核）",
+    "delta_x_gives_flat_k": true,
+    "verdict": "局域耦合（实空间）vs 非局域卷积（动量空间）——耦合形式【不同】"
+  },
+  "verdict": {
+    "topological_charge": "相同（π₃(S²)=ℤ 同伦不变量）",
+    "energy": "不同（E_x=∫|k|²|n(k)|² ≠ E_k=∫|∂_k n|²）",
+    "stability_energy_barrier": "不同（能量泛函不同）",
+    "coupling": "不同（局域 vs 非局域卷积）",
+    "conclusion": "三个物理量里能量、耦合【不同】（稳定性拓扑相同、能量势垒不同）→ 动量空间 Hopfion 和实空间 Hopfion【不等价】。「视角」只在拓扑荷（π₃=ℤ）层面成立，物理量层面不成立 → 「实空间」局域化是真的，不是文字游戏。"
+  }
+}
