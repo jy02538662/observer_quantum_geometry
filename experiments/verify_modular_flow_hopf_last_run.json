@@ -1,0 +1,26 @@
+{
+  "1_compact_time": {
+    "modular_flow": "σ_t = ρ^{it}·ρ^{-it}，t ∈ S¹（周期，紧）",
+    "contrast": "log 尺度 s ∈ [λ_min, λ_c] 是区间（非紧）；模流时间 t 是 S¹（紧）",
+    "compact_3rd_dim": "模流时间 t 提供 Hopf 需要的【紧】第三维"
+  },
+  "2_phase_diff_winding": {
+    "modular_frequency": 0.6931,
+    "phase_diff": "δφ(t) = t·ln(λ_1/λ_2)（两个 D 相位差）",
+    "winding_over_one_cycle": 1.0,
+    "note": "两个 D 相位差在模流时间 t 上绕一圈（绕数 1）"
+  },
+  "3_hopf_charge": {
+    "hopf_map": "n = (sinψ cosδφ, sinψ sinδφ, cosψ)，ψ=极角(π-flux)，δφ=两个D相位差(模流时间)",
+    "Q": -0.49989,
+    "nonzero": true,
+    "note": "模流时间 t 当第三维 + 相位差绕 → 非平凡 Hopf（Q≠0）"
+  },
+  "verdict": {
+    "continuous_scale": "OQG 的 ρ=C/λ 给【连续】尺度方向（s=log λ），不是障碍",
+    "compact_3rd_dim": "模流时间 t ∈ S¹ 给【紧】第三维（区间→圈）",
+    "phase_diff_winds": "两个 D 相位差 = 模流相位，在 t 上绕（绕数 1）",
+    "hopf_nonzero": "合成 Hopf 映射 → Q≠0（非平凡）",
+    "remaining": "从「模流时间 t 当第三维」到「完整从 D 推出」还差：把 ψ（极角）和 δφ（相位差）都从 D 的结构显式推出来（π-flux 的 d 矢量 + 模流相位），这步可算"
+  }
+}

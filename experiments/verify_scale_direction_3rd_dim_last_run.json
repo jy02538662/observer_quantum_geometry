@@ -1,0 +1,33 @@
+{
+  "1_scale_direction_spectrum": {
+    "modular_frequencies": "θ_ij = ln(λ_i/λ_j) = ln(j/i)（尺度不变 ρ，λ_i∝1/i）",
+    "N": [
+      4,
+      16,
+      64,
+      256,
+      1024
+    ],
+    "min_gap_Δmin": [
+      0.28768207,
+      0.06453852,
+      0.01574836,
+      0.0039139,
+      0.00097704
+    ],
+    "gap_scaling": "Δ_min = ln(N/(N-1)) ≈ 1/N → 0（只有 N→∞ 才连续）",
+    "discrete_at_finite_N": true,
+    "note": "尺度方向的谱在有限 N 是【离散】的（有隙 ≈1/N），不是连续绕圈。"
+  },
+  "2_discrete_blocks_hopf": {
+    "hopf_needs": "连续第三维（相位差 φ1−φ2 连续绕 S¹，绕数整数 = Hopf 荷）",
+    "scale_gives": "离散模流频率 ln(j/i)（有隙），给离散相位，不给连续绕数",
+    "conclusion": "「尺度方向」当 Hopf 第三维，卡在「离散→连续」——连续绕需要 N→∞。"
+  },
+  "verdict": {
+    "scale_as_3rd_dim": "可能，但需要 N→∞（连续尺度谱），即「离散→连续」",
+    "two_walls_converge": "「三维要 Hopf 拓扑」和「离散→连续」在这里合流：第三维的连续性 = 离散→连续",
+    "note": "这与 AGENTS.md「离散→连续已由 OQG 解决」对接——若 OQG 给连续尺度谱，则尺度方向可能补上第三维。",
+    "remaining": "OQG 的连续尺度谱能否给出「相位差在尺度方向连续绕」→ 非平凡 Hopf，仍需具体构造。"
+  }
+}

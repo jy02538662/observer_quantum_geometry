@@ -1,0 +1,39 @@
+{
+  "A_soler_EOM": {
+    "L": "Psi**2*Psibar**2*lambda/2",
+    "dL/dΨ̄": "Psi**2*Psibar*lambda",
+    "is_lambda_rho_Psi": true,
+    "note": "Soler 非线性项 = λ(Ψ̄Ψ)Ψ（四费米子 = 密度²自相互作用）"
+  },
+  "B_3_0_four_fermion": {
+    "S": "deltaD**2*mu**2/2 + deltaD*rho",
+    "δD_*": "-rho/mu**2",
+    "S_eff": "-rho**2/(2*mu**2)",
+    "is_minus_rho2_over_2mu2": true,
+    "note": "积掉 δD（质量 μ）→ S_eff = −ρ²/(2μ²)，接触四费米子，耦合 = 1/μ²"
+  },
+  "C_mapping": {
+    "soler_coupling": "λ（手放）",
+    "bond_order_coupling": "1/μ²（δD 质量²的倒数）",
+    "μ": [
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "1/μ²": [
+      4.0,
+      1.0,
+      0.25,
+      0.0625
+    ],
+    "mapping": "λ = 1/μ²（Soler 耦合 = 键序涨落 δD 质量²的倒数）"
+  },
+  "verdict": {
+    "1_0": "λ(Ψ̄Ψ)Ψ = 手放的接触四费米子（密度²，耦合 λ）",
+    "3_0": "ρ K⁻¹ ρ = 内生的中介四费米子（键序 K=δE/δD 当传播子）",
+    "massive_limit": "K → μ²（δD 有质量）时，ρ K⁻¹ ρ → (1/μ²)ρ² = Soler 接触四费米子",
+    "connection": "1.0 的 λ(Ψ̄Ψ)Ψ = 3.0 的 ρ K⁻¹ ρ 在「δD 有质量」极限，λ = 1/μ²",
+    "significance": "1.0 手放的「相互作用」= 3.0 内生的「键序四费米子」的重极限（δD 质量→∞）"
+  }
+}

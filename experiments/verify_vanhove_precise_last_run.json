@@ -1,0 +1,29 @@
+{
+  "1_K_and_U": {
+    "nocc_half（E_F=0）": 2048,
+    "nocc_vh（E_F=-2）": 1023,
+    "fill_vh": 0.2498,
+    "K_half": -88.5425,
+    "K_vh": -1370.0403,
+    "U_half（|U|）": 0.0113,
+    "U_vh（|U|）": 0.0007,
+    "note": "范霍夫填充的 |U| 是否比半填充更大（Peierls 更弱）"
+  },
+  "2_dos": {
+    "omega_D_t（配对尺度）": 0.033,
+    "N_vh_avg（ΔE=0.05 平均）": 0.542,
+    "N_dirac_avg": 0.0098,
+    "enhancement": 55.5,
+    "note": "范霍夫 DOS 在配对尺度上平均（非直方图峰值）"
+  },
+  "3_lambda_Tc": {
+    "lambda_vh（|U_vh|×N_vh_avg）": 0.0004,
+    "Tc_vh_K": 0.0,
+    "77K_needs_lambda": 0.58,
+    "note": "范霍夫掺杂（钉死后）的 λ 和 Tc，对比 77K 门槛 0.58"
+  },
+  "verdict": {
+    "vanhove_precise": "若 λ_vh ≥ 0.58，则范霍夫掺杂能到 77K——高温超导正路坐实",
+    "caveat_resolved": "|U_vh| 重算 + DOS 配对尺度平均，两个 caveat 已钉"
+  }
+}

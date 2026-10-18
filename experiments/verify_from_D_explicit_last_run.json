@@ -1,0 +1,24 @@
+{
+  "1_psi_from_D": {
+    "d_vector": "(sin k_x, sin k_y, m)",
+    "psi": "atan2(√(sin²k_x+sin²k_y), m)",
+    "from_D": "ψ 是 π-flux 的 d 矢量直接给的极角（D=σ·d(k) 的结构），非手放"
+  },
+  "2_dphi_from_rho": {
+    "modular_phase": "δφ = t·ln(λ_1/λ_2)",
+    "from_rho": "δφ 是模流 σ_t=ρ^{it}·ρ^{-it} 的相位（ρ=C/λ 尺度不变态），非手放",
+    "two_D": "λ_1,λ_2 = 两个 D 的尺度（来自欠缺：一个 D 欠缺→指向其他 D）"
+  },
+  "3_hopf_charge": {
+    "hopf_map": "n = (sinψ cosδφ, sinψ sinδφ, cosψ)，ψ 从 D、δφ 从 ρ",
+    "Q": -0.49994,
+    "nonzero": true,
+    "note": "ψ、δφ 都从框架结构显式推出后，Q = −½ ≠ 0（非平凡 Hopf）"
+  },
+  "verdict": {
+    "psi_from_D": "ψ = atan2(√(sin²k_x+sin²k_y), m) ← π-flux 的 d 矢量（D 的结构）",
+    "dphi_from_rho": "δφ = t·ln(λ_1/λ_2) ← 模流（ρ 的结构）",
+    "hopf_nonzero": "合成 → Q = −½（非平凡）",
+    "honest_boundary": "ψ 从 D 推出（干净）；δφ 从 ρ 推出（模流，走 ρ 不是 D）——「两个 D 相位差」的「两个 D」来自欠缺，需进一步把欠缺→两个 D 的尺度比 ln(λ_1/λ_2) 显式落到 D-D 自反上"
+  }
+}

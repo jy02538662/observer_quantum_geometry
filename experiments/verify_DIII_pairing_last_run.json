@@ -1,0 +1,26 @@
+{
+  "s_wave": {
+    "rel_diff": 0.36,
+    "DIII": false,
+    "note": "s 波（iσ_y 原胞内）→ 若 rel_diff 大则破 T'（D）"
+  },
+  "p_ip": {
+    "rel_diff": 0.594,
+    "DIII": false,
+    "note": "手征 p+ip（x 键 Δ₀、y 键 iΔ₀）"
+  },
+  "Delta_J_real": {
+    "rel_diff": 2.01e-15,
+    "DIII": true,
+    "note": "Δ=J（实，T'偶）——验证 T'ΔT'⁻¹ 判据"
+  },
+  "Delta_iJ_imag": {
+    "rel_diff": 0.894,
+    "DIII": false,
+    "note": "Δ=iJ（虚，T'奇）——验证 T'ΔT'⁻¹ 判据"
+  },
+  "verdict": {
+    "criterion": "T' Δ T'^{-1} = Δ（DIII）vs −Δ（D）",
+    "next": "若 s 波破 T'、p+ip 也破、Δ=J 破/不破，则需构造「谷奇单态 Δ=iΔ₀ σ_y τ_z」或「d 波」"
+  }
+}

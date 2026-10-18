@@ -1,0 +1,45 @@
+{
+  "1_deficiency_index": {
+    "jones_index": "[M_n⊗M_k : M_n] = k²（每次切割丢 k² 个环境视角）",
+    "k": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      64
+    ],
+    "index": [
+      1,
+      4,
+      16,
+      64,
+      256,
+      4096
+    ],
+    "k_to_infty": "k→∞ ⟹ index = ∞ ⟹ 一个 D 永远欠缺，指向其他 D"
+  },
+  "2_two_D_scale_ratio": {
+    "two_D": "D（λ_c = UV 截断）+ 其他 D（λ_min = IR 截断，观察者分辨率）",
+    "scale_ratio": 5.2983,
+    "finite_because": "观察者分辨率给有限 λ_min（否则 λ_min→0 ⟹ ln(λ_c/λ_min)→∞ = index ∞ 一致）",
+    "note": "两个 D 的尺度比 ln(λ_c/λ_min) 是有限的（≈λ_mod 量级），来自欠缺（index ∞）"
+  },
+  "3_dphi_from_deficiency": {
+    "dphi": "δφ(t) = t·ln(λ_c/λ_min)（相位差绕的速率 = 两个 D 尺度比）",
+    "winding": 0.999,
+    "note": "δφ 的「两个 D」来自欠缺（D 的 index ∞ → λ_c/λ_min），不再是 ρ 的手放尺度"
+  },
+  "4_hopf": {
+    "hopf_map": "n = (sinψ cosδφ, sinψ sinδφ, cosψ)，ψ 从 D（d 矢量）、δφ 从欠缺（尺度比）",
+    "Q": -0.49994,
+    "nonzero": true,
+    "note": "完全「从 D 推出」（ψ 从 D、δφ 从欠缺）后，Q = −½ ≠ 0"
+  },
+  "verdict": {
+    "deficiency_to_scale": "欠缺（index ∞）→ 两个 D（λ_c, λ_min）→ 尺度比 ln(λ_c/λ_min)（有限，观察者分辨率）",
+    "dphi_from_D": "δφ = t·ln(λ_c/λ_min) 的「两个 D」来自 D 的欠缺结构（非 ρ 手放）",
+    "full_chain": "ψ 从 D（d 矢量）+ δφ 从欠缺（尺度比）→ Q = −½，完整「从 D 推出」",
+    "no_residual": "最后半环已收：δφ 的「两个 D」= D 的欠缺（index ∞）→ λ_c/λ_min，不再残留"
+  }
+}

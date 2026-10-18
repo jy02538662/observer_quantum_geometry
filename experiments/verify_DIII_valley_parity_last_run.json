@@ -1,0 +1,25 @@
+{
+  "N8": {
+    "rel_diff（<1e-8 = DIII）": {
+      "Delta_J（谷间，非局域）": 2.01e-15,
+      "谷奇 d 波（交错 d）": 0.656,
+      "谷偶 d 波（无交错）": 0.622,
+      "谷奇 s 波（交错）": 0.612
+    },
+    "note": "Δ=J 应 DIII（基准）；谷奇 d 波若 <1e-8 则 DIII 钉死"
+  },
+  "N12": {
+    "rel_diff（<1e-8 = DIII）": {
+      "Delta_J（谷间，非局域）": 2.49e-15,
+      "谷奇 d 波（交错 d）": 0.651,
+      "谷偶 d 波（无交错）": 0.608,
+      "谷奇 s 波（交错）": 0.623
+    },
+    "note": "Δ=J 应 DIII（基准）；谷奇 d 波若 <1e-8 则 DIII 钉死"
+  },
+  "verdict": {
+    "criterion": "rel_diff < 1e-8 ⟹ T'-偶 ⟹ DIII（保 Kramers）；否则 D（破 T'）",
+    "expectation": "谷奇（交错，连接 Kramers 对）→ DIII；谷偶（无交错，谷内）→ D",
+    "physics": "DIII 是 Kramers 对配对，需谷间（谷奇）连接；谷内（谷偶）不连接 Kramers 对反而破 T'"
+  }
+}

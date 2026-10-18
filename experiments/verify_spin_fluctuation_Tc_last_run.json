@@ -1,0 +1,42 @@
+{
+  "1_AFM_threshold": {
+    "chi_Q": 0.3166,
+    "U_c（AFM 不稳定性阈值）": 3.159,
+    "note": "U→U_c 时自旋涨落最强（RPA χ_RPA = χ/(1-Uχ) 发散）"
+  },
+  "2_spin_fluctuation_scale": {
+    "U（Hubbard，单位 t）": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "J = U²χ(Q)（单位 t）": [
+      0.0791,
+      0.3166,
+      0.7124,
+      1.2664,
+      1.9788
+    ],
+    "J（meV）": [
+      79.1,
+      316.6,
+      712.4,
+      1266.4,
+      1978.8
+    ],
+    "note": "自旋涨落能标 J ~ U²χ(Q)，U→U_c≈3.3 时 J 最大"
+  },
+  "3_compare_energy_scale": {
+    "omega_D（声子，弱耦合）": "33.0 meV",
+    "J（自旋涨落，U=1）": "316.6 meV",
+    "J（U=2）": "1266.4 meV",
+    "note": "自旋涨落能标 J 远大于声子 ω_D（U~1 时 J~317 meV vs ω_D~33 meV，约 10×）"
+  },
+  "verdict": {
+    "spin_fluctuation_scale": "J = U²χ(Q) ~ 300–1300 meV（U=1–2），远大于声子 ω_D~33 meV",
+    "Tc_hint": "Tc 由 J 决定（几百 meV 量级），比弱耦合 BCS 的 mK 高得多",
+    "honest": "精确 Tc 需解 Eliashberg（配对核 + d 波），但「能标」方向明确：J >> ω_D，高温超导有戏"
+  }
+}

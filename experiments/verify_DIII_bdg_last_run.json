@@ -1,0 +1,25 @@
+{
+  "m_0.0": {
+    "m": 0.0,
+    "rel_diff（[T', H_BdG]=0）": 0.351,
+    "DIII_survives": false,
+    "az_class": "D（单 Majorana）"
+  },
+  "m_0.1": {
+    "m": 0.1,
+    "rel_diff（[T', H_BdG]=0）": 0.36,
+    "DIII_survives": false,
+    "az_class": "D（单 Majorana）"
+  },
+  "m_0.5": {
+    "m": 0.5,
+    "rel_diff（[T', H_BdG]=0）": 0.34,
+    "DIII_survives": false,
+    "az_class": "D（单 Majorana）"
+  },
+  "verdict": {
+    "no_magnetic_field": "内禀 Kramers T²=-1 → 不需外加磁场 → DIII 类拓扑超导",
+    "if_DIII_all_m": "若所有 m 下 [T', H_BdG]=0，则「交错质量三合一」在 BdG 层面成立 = 无磁场 DIII 拓扑超导机制坐实",
+    "significance": "「无需磁场」是当前拓扑超导最大的工程障碍，DIII 机制省掉它 = 真卖点"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "J_distance_structure": {
+    "manhattan_distance_fraction": {
+      "0": 0.0,
+      "1": 0.0502,
+      "2": 0.1614,
+      "3": 0.2352,
+      "4": 0.2395,
+      "5": 0.1589,
+      "6": 0.1164,
+      "7": 0.0384,
+      "8": 0.0
+    },
+    "note": "J 的 |J_ij|² 按曼哈顿距离的分布——哪个距离主导"
+  },
+  "truncated_J": {
+    "kept_distance": 4,
+    "rel_diff": 0.255,
+    "DIII": false,
+    "note": "只保留曼哈顿距离 4 的 J 分量 → 是否 DIII"
+  },
+  "verdict": {
+    "J_structure": "J 主导的曼哈顿距离 = 谷 Kramers 结构的空间尺度",
+    "local_pairing": "若截断 J 给 DIII，则找到了局域谷奇配对；否则需动量空间显式谷算子"
+  }
+}

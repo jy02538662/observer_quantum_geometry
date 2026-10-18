@@ -1,0 +1,20 @@
+{
+  "1_winding": {
+    "d_vector": "d(k) = (sin k_x, sin k_y)",
+    "relative_phase": "θ(k) = atan2(sin k_y, sin k_x)（两子格 A/B 的相对相位）",
+    "winding_around_0_0": 0.999,
+    "winding_around_pi_pi": 0.999,
+    "note": "相对相位 θ(k) 绕 Dirac 点一圈 = ±1（Chern 数，π₂，2D 非平凡）"
+  },
+  "2_chern_vs_hopf": {
+    "winding_gives": "Chern 数（π₂，2D）：θ(k) 在 2 维 k 空间绕 Dirac 点",
+    "hopf_needs": "Hopf 数（π₃，3D）：θ(k) 在 3 维 k 空间绕（需要第三维动量）",
+    "conclusion": "「两个分量（子格）的相对相位」确实绕（给 Chern ±1），但这是 2D Chern，不是 3D Hopf。要 Hopf 需要 θ(k) 依赖第三维。"
+  },
+  "verdict": {
+    "phase_winds": true,
+    "but_gives": "2D Chern（π₂），非 3D Hopf（π₃）",
+    "key": "「两个 D 的相位差 = sin 型来源」成立（相对相位确实绕）；但绕的是 2D Dirac 点 → Chern，不是 3D → Hopf。",
+    "remaining": "第三维从哪来：尺度方向（模流 1D）？颜色（S₃ 三维）？还是 D-D 自反的折叠？这是「三维要 Hopf 拓扑」的精确落点。"
+  }
+}

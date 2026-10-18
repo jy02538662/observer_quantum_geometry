@@ -1,0 +1,29 @@
+{
+  "1_chi_Q_vs_N": {
+    "N": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "χ(Q=(π,π))": [
+      0.2827,
+      0.302,
+      0.3117,
+      0.3166
+    ],
+    "grows_with_N": true,
+    "note": "χ(Q) 随 N 增长（对数发散）——自旋涨落强"
+  },
+  "2_spin_vs_charge": {
+    "spin_susceptibility_chi_Q": "对数发散（强自旋涨落，Dirac 点 |ε|→0）",
+    "charge_density_N_E": "线性小（N(E)~E，弱耦合 λ 的瓶颈）",
+    "key": "自旋涨落配对的量是 χ(Q)（对数发散），不是 N(E_F)（线性小）——所以不受「高 DOS ↔ 强 Peierls 互斥」限制"
+  },
+  "verdict": {
+    "spin_fluctuation": "χ(Q=(π,π)) 对数发散 → π-flux 有强的谷间自旋涨落",
+    "momentum_space": "这是纯动量空间机制，不碰实空间（付费桥2）",
+    "correct_my_error": "我之前「B 路线 = 付费桥2」是误判——自旋涨落配对不需要实空间局域自旋",
+    "next": "算配对核 V(k,k')（RPA），Tc 由 J（自旋涨落能标）决定，不是 λ"
+  }
+}

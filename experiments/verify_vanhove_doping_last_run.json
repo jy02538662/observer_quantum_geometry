@@ -1,0 +1,28 @@
+{
+  "1_dos": {
+    "N_dirac（E≈0 附近）": 0.0051,
+    "E_vh（范霍夫奇点位置）": -2.0,
+    "N_vh（范霍夫 DOS 峰值）": 1.0681,
+    "enhancement": 210.0,
+    "note": "范霍夫奇点 DOS 比狄拉克点高多少倍"
+  },
+  "lambda_Tc_|U|=1.4（m=0.1）": {
+    "lambda_Dirac": 0.0071,
+    "lambda_vH": 1.4954,
+    "Tc_Dirac_K": 0.0,
+    "Tc_vH_K": 220.5848,
+    "note": "|U|=1.4（m=0.1）：狄拉克 vs 范霍夫的 λ 和 Tc"
+  },
+  "lambda_Tc_|U|=5.8（m=1.0）": {
+    "lambda_Dirac": 0.0295,
+    "lambda_vH": 6.1951,
+    "Tc_Dirac_K": 0.0,
+    "Tc_vH_K": 366.3533,
+    "note": "|U|=5.8（m=1.0）：狄拉克 vs 范霍夫的 λ 和 Tc"
+  },
+  "verdict": {
+    "vanhove_enhancement": "范霍夫奇点 DOS 增强倍数",
+    "77K_needs_lambda": 0.58,
+    "if_lambda_vh_gt_0p58": "若范霍夫 λ 超过 0.58，则 Tc 可到 77K——范霍夫掺杂是高温超导的正路"
+  }
+}

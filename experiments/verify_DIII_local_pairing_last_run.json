@@ -1,0 +1,21 @@
+{
+  "real_p_wave": {
+    "rel_diff": 0.622,
+    "DIII": false,
+    "note": "real_p_wave → D"
+  },
+  "real_p_wave_staggered": {
+    "rel_diff": 0.595,
+    "DIII": false,
+    "note": "real_p_wave_staggered → D"
+  },
+  "staggered_real": {
+    "rel_diff": 0.474,
+    "DIII": false,
+    "note": "staggered_real → D"
+  },
+  "verdict": {
+    "goal": "找局域实反对称配对，满足 JΔ*Jᵀ=+Δ（DIII）",
+    "next": "若都破 T'，则需构造显式谷（τ）结构：τ_z = 谷算符，配对 = 谷奇实反对称"
+  }
+}

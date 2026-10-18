@@ -1,0 +1,8 @@
+{
+  "question": "can staggered mass (Kramers+CDW suppression) x spin fluctuation (pairing attraction) give a T'-even (DIII) pairing channel?",
+  "symmetric_structure": {
+    "J2": -1,
+    "GammaJ_anticommute": true
+  },
+  "T_prime_criterion": "T' Δ(k) T'⁻¹ = +Δ(−k) ⟹ DIII; = −Δ(−k) ⟹ D"
+}

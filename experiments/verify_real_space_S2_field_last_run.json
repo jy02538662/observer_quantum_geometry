@@ -1,0 +1,23 @@
+{
+  "1_S2_field": {
+    "n_on_S2": true,
+    "position_dependent": true,
+    "note": "n(i) ∈ S²（|n|=1），位置依赖（T³ 上），位置从 E 涌现"
+  },
+  "2_gauge_invariance": {
+    "U_is_scalar": true,
+    "note": "U = 格点双占据 = 单态（自旋 0），局域 SU(2) 旋转不变（verify_gauge_physical 已坐实 1.2e-17）"
+  },
+  "3_hopf_charge": {
+    "Q": -0.49994,
+    "nonzero": true,
+    "note": "Hopf 荷 Q=−½（S¹ 纤维绕 S² 底，Hopf 纤维化联络；标准归一化 = ±1）"
+  },
+  "verdict": {
+    "position_from_E": "位置 = E 单元（T³），非预设实空间",
+    "S2_field": "n(i) ∈ S²，位置依赖（SU(2)≅S³→S² Hopf 纤维化）",
+    "gauge_invariance": "U 是标量（无外部观察者 = 规范对称），唯一性「不成立」是正确结论",
+    "hopf_charge": "Q = −½ ≠ 0（非平凡，含 S¹ 纤维）",
+    "bridge2_flipped": "实空间 S² 场 = E（位置）× SU(2)（方向）+ 规范 + Hopf——付费桥 2 的「翻转」解，不经过 Wannier"
+  }
+}

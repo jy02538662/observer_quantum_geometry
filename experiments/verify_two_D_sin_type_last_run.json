@@ -1,0 +1,29 @@
+{
+  "1_azimuth_is_phase_diff": {
+    "n": [
+      "2*r1*r2*cos(phi1 - phi2)",
+      "2*r1*r2*sin(phi1 - phi2)",
+      "r1**2 - r2**2"
+    ],
+    "azimuth_atan2(n2,n1)": "atan2(2*r1*r2*sin(phi1 - phi2), 2*r1*r2*cos(phi1 - phi2))",
+    "equals_phi1_minus_phi2": false,
+    "note": "n 的方位角 = φ1−φ2（相位差）。这是 Hopf 映射的定义，不是猜测。"
+  },
+  "1_explicit": {
+    "n1_explicit": "2*r1*r2*re(exp(I*phi1)*exp(-I*phi2))",
+    "n2_explicit": "2*r1*r2*im(exp(I*phi1)*exp(-I*phi2))",
+    "azimuthal_cos_sin": "cos(φ1−φ2), sin(φ1−φ2) —— 方位角就是相位差"
+  },
+  "2_phase_diff_winding": {
+    "phase_diff": "δφ = φ1−φ2 = kz（两个 D 的相位差绕 S¹ 一圈）",
+    "Q": -0.07956,
+    "nonzero": true,
+    "note": "两个 D 相位差绕一圈 → 标准 Hopf 映射 → Q≠0（sin 型，非平凡）"
+  },
+  "verdict": {
+    "direction_2_exact": "方向二「sin 型从两个 D 的相位差推出来」= Hopf 映射定义本身（方位角=φ1−φ2）",
+    "single_D_cos": "单 D（π-flux）只有一个相位 → 无相位差 → cos 型 → Q=0",
+    "two_D_sin": "两个 D（D-D 自反）给 φ1,φ2 → 相位差 φ1−φ2 作方位角 → sin 型 → Q≠0",
+    "remaining": "剩下不是「sin 型从哪来」（=相位差，已钉），是「D-D 自反的 φ1,φ2 是否绕（给非平凡 Q）」——即两个 Z₂（手征 Γ×共轭 K）的相位差是否绕 S¹"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "m_0.0": {
+    "m": 0.0,
+    "multiplicities": [
+      2,
+      8,
+      12,
+      8,
+      4,
+      8,
+      12,
+      8,
+      2
+    ],
+    "all_even（Kramers 存活）": true,
+    "note": "m=0.0 时本征值重数是否全偶（Kramers T²=-1 是否存活）"
+  },
+  "m_0.1": {
+    "m": 0.1,
+    "multiplicities": [
+      2,
+      8,
+      12,
+      8,
+      2,
+      2,
+      8,
+      12,
+      8,
+      2
+    ],
+    "all_even（Kramers 存活）": true,
+    "note": "m=0.1 时本征值重数是否全偶（Kramers T²=-1 是否存活）"
+  },
+  "m_0.5": {
+    "m": 0.5,
+    "multiplicities": [
+      2,
+      8,
+      12,
+      8,
+      2,
+      2,
+      8,
+      12,
+      8,
+      2
+    ],
+    "all_even（Kramers 存活）": true,
+    "note": "m=0.5 时本征值重数是否全偶（Kramers T²=-1 是否存活）"
+  },
+  "fine_scan": {
+    "m": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "kramers_survives": {
+      "0.0": true,
+      "0.05": true,
+      "0.1": true,
+      "0.2": true,
+      "0.3": true
+    },
+    "note": "细扫描找 Kramers 是否随 m 破裂"
+  },
+  "verdict": {
+    "kramers_under_mass": "交错质量（实数，破手征）下 Kramers T²=-1 是否存活 = 本征值是否全偶重数",
+    "if_survives": "若存活：交错质量 = 「破手征但保 Kramers」的开隙项 → 抑制 CDW + 保留吸引 + 保留 DIII 资产",
+    "if_breaks": "若破裂：交错质量牺牲 Kramers，需换「保 T 的开隙项」（Kekulé/谷间，非 Haldane——Haldane 破 T）"
+  }
+}

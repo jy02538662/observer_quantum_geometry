@@ -1,0 +1,52 @@
+{
+  "1_comparison": {
+    "rows": [
+      {
+        "U": 0.5,
+        "J（meV）": 76.0,
+        "λ_d": 0.133,
+        "Tc_BCS（K，高估）": 0.0,
+        "Tc_strong（K，0.09J）": 79.0,
+        "Tc_McMillan（K）": 0.0
+      },
+      {
+        "U": 1.0,
+        "J（meV）": 302.0,
+        "λ_d": 0.649,
+        "Tc_BCS（K，高估）": 750.0,
+        "Tc_strong（K，0.09J）": 315.0,
+        "Tc_McMillan（K）": 100.0
+      },
+      {
+        "U": 1.5,
+        "J（meV）": 680.0,
+        "λ_d": 1.863,
+        "Tc_BCS（K，高估）": 4609.0,
+        "Tc_strong（K，0.09J）": 709.0,
+        "Tc_McMillan（K）": 1078.0
+      },
+      {
+        "U": 2.0,
+        "J（meV）": 1208.0,
+        "λ_d": 4.576,
+        "Tc_BCS（K，高估）": 11263.0,
+        "Tc_strong（K，0.09J）": 1261.0,
+        "Tc_McMillan（K）": 2928.0
+      }
+    ],
+    "note": "三个估计：弱耦合 BCS 高估 / 强耦合 0.09J / McMillan 中间耦合"
+  },
+  "2_U1": {
+    "U=1": {
+      "Tc_BCS": 750.0,
+      "Tc_strong": 315.0,
+      "Tc_McMillan": 100.0
+    },
+    "honest_range": "真实 Tc 在强耦合（0.09J）和 McMillan 之间，约 100–300 K"
+  },
+  "verdict": {
+    "weak_coupling_overestimates": "Tc_BCS = 751 K 是高估（λ_d≈0.65 不在弱耦合区）",
+    "strong_coupling_corrects": "强耦合饱和 Tc ≈ 0.09J ≈ 350 K，McMillan ≈ 100–200 K",
+    "honest_Tc": "真实 d 波 Tc 约 100–300 K（高温区间，类似铜氧化物），不是 751 K、也不是室温以上"
+  }
+}
